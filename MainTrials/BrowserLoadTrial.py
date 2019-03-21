@@ -1,8 +1,9 @@
-from BrowserFunctions.BrowserLoad import BrowserLoad
-from BrowserFunctions.BrowserClose import BrowserClose
+from GeneralUtilities.BrowserFunctions import BrowserLoad
+from GeneralUtilities.BrowserFunctions import BrowserClose
+
 Loader = BrowserLoad()
-fd=Loader.FireFoxLoad('https://github.com')
-cd=Loader.ChromeLoad('https://github.com')
+fd=Loader.FireFoxLoad('https://www.reddit.com')
+cd=Loader.ChromeLoad('https://www.reddit.com')
 
 Closerf=BrowserClose(fd)
 Closerc=BrowserClose(cd)
