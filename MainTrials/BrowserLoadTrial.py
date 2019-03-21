@@ -1,13 +1,11 @@
-from GeneralUtilities.BrowserFunctions import BrowserLoad
-from GeneralUtilities.BrowserFunctions import BrowserClose
+from GeneralUtilities import BrowserFunctions
 
-Loader = BrowserLoad()
-fd=Loader.FireFoxLoad('https://www.reddit.com')
-cd=Loader.ChromeLoad('https://www.reddit.com')
+driver=BrowserFunctions.BrowserLoad('chrome','https://www.reddit.com')
+driver1=BrowserFunctions.BrowserLoad('googlechrome','https://www.reddit.com')
+driver2=BrowserFunctions.BrowserLoad('adfsgfdh','https://www.reddit.com')
+driver.close()
+driver1.close()
+driver2.close()
 
-Closerf=BrowserClose(fd)
-Closerc=BrowserClose(cd)
 
-Closerc.BClose()
-Closerf.BClose()
 
