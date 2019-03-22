@@ -16,7 +16,6 @@ def ChromeLoad(baseurl):
     driver.maximize_window()
     driver.implicitly_wait(3)
     driver.get(baseurl)
-    driver.
     return driver
 
 def BrowserLoad(browser,baseurl):

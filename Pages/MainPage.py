@@ -2,7 +2,6 @@ from selenium import webdriver
 from GeneralUtilities import BrowserFunctions
 
 class MainPage():
-    url='http://localhost:3000/home'
 
     def __init__(self,driver):
 
