@@ -3,7 +3,7 @@ from GeneralUtilities import BrowserFunctions
 
 
 class RegisterPage():
-    url='http://localhost:3000/Registration/'
+    url='/Registration/'
 
     def __init__(self,driver):
         self.driver=driver

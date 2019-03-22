@@ -3,7 +3,7 @@ from GeneralUtilities import BrowserFunctions
 
 
 class LoginPage():
-    url='http://localhost:3000/Login/'
+    url='/Login/'
 
     def __init__(self,driver):
         self.driver=driver
