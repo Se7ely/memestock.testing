@@ -1,6 +1,6 @@
-from Pages import RegisterPage
+from Pages.RegisterPage import RegisterPage
 
-rp=RegisterPage.RegisterPage('firefox')
+rp=RegisterPage('firefox')
 rp.emailfield.send_keys('is it working ??')
 rp.emailfield.clear()
 rp.usernamefield.send_keys('goodddaaaamnnn')

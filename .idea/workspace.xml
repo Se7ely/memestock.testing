@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dab42480-5bcd-4256-957a-1b5ea0194284" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MainTrials/RegisterPageTrial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/RegisterPage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MainTrials/MainPageTrial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/MainPage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainTrials/RegisterPageTrial.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainTrials/RegisterPageTrial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainTrials/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/MainTrials/geckodriver.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +40,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pages/RegisterPage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="95">
+              <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pages/MainPage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -50,10 +62,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MainTrials/MainPageTrial.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MainTrials/RegisterPageTrial.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
-              <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+              <caret line="7" column="25" lean-forward="true" selection-start-line="2" selection-end-line="7" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -84,7 +108,10 @@
         <option value="$PROJECT_DIR$/Pages.py" />
         <option value="$PROJECT_DIR$/MainTrials/BrowserLoadTrial.py" />
         <option value="$PROJECT_DIR$/Pages/RegisterPage.py" />
+        <option value="$PROJECT_DIR$/Pages/HomePage.py" />
         <option value="$PROJECT_DIR$/MainTrials/RegisterPageTrial.py" />
+        <option value="$PROJECT_DIR$/Pages/MainPage.py" />
+        <option value="$PROJECT_DIR$/MainTrials/MainPageTrial.py" />
       </list>
     </option>
   </component>
@@ -149,7 +176,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.RegisterPageTrial">
+  <component name="RunManager" selected="Python.MainPageTrial">
     <configuration name="BrowserLoadTrial" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="memstock.testing" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -163,6 +190,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MainTrials/BrowserLoadTrial.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MainPageTrial" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="memstock.testing" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MainTrials" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MainTrials/MainPageTrial.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -194,6 +242,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.MainPageTrial" />
         <item itemvalue="Python.RegisterPageTrial" />
         <item itemvalue="Python.BrowserLoadTrial" />
       </list>
@@ -355,6 +404,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/RegisterPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GeneralUtilities/BrowserFunctions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -365,10 +424,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/RegisterPage.py">
+    <entry file="file://$PROJECT_DIR$/Pages/MainPage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="133">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
@@ -378,7 +437,17 @@
     <entry file="file://$PROJECT_DIR$/MainTrials/RegisterPageTrial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <caret line="7" column="25" lean-forward="true" selection-start-line="2" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainTrials/MainPageTrial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
