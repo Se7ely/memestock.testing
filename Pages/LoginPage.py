@@ -1,13 +1,31 @@
 from selenium import webdriver
 from GeneralUtilities import BrowserFunctions
+from Pages.Page import Page
+from Pages.RegisterPage import RegisterPage # just to write redirect
+
+class LoginPage(Page):
+
+    def __init__(self):
+        Page.__init__(self)
+        self.url='/Login/'
+        self.usernamefield='//input[@placeholder="User name"]'
+        self.passwordfield='//input[@placeholder="Password"]'
+        self.loginbutton='//button[contains(text(),"Login")]'
+        self.createaccount='//a[@href="/Registration/"]'
+
+    def Getpasswordfield(self,driver):
+        return driver.find_element_by_xpath(self.passwordfield)
+
+    def Getloginbutton(self,driver):
+        return driver.find_element_by_xpath(self.loginbutton)
+
+    def ErrorDisplayed(self,driver):
+        error=driver.find_elements_by_xpath('//p[@class="Login_Invalid__3998w"]')
+        return len(error)>0
+
+    def Redirect(self,driver):#this is completely wrong it is just a method to overcome shorthandness in react routing
+        rp=RegisterPage()
+        driver.find_element_by_xpath(rp.alreadyregistered).click()
 
 
-class LoginPage():
-    url='/Login/'
 
-    def __init__(self,driver):
-        self.driver=driver
-        self.usernamefield=self.driver.find_element_by_xpath('//input[@placeholder="User name"]')
-        self.passwordfield=self.driver.find_element_by_xpath('//input[@placeholder="Password"]')
-        self.loginbutton=self.driver.find_element_by_xpath('//button[contains(text(),"Login")]')
-        self.createaccount=self.driver.find_element_by_xpath('//a[@href="/Registration/"]')

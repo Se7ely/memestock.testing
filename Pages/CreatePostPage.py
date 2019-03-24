@@ -4,7 +4,7 @@ from Pages.MainPage import MainPage
 
 class CreatePostPage(MainPage):
 
-    url='/CreatePost/'
 
-    def __init__(self,driver):
-        MainPage.__init__(self,driver)
+    def __init__(self):
+        MainPage.__init__(self)
+        self.url = '/CreatePost/'

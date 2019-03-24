@@ -4,9 +4,10 @@ from Pages.MainPage import MainPage
 
 class UserSettingsPage(MainPage):
 
-    url='/Settings/'
 
-    def __init__(self,driver):
-        MainPage.__init__(self,driver)
-        self.accounttab=self.driver.find_element_by_xpath('//a[@href="/Settings/Account"]')
-        self.profiletab=self.driver.find_element_by_xpath('//a[@href="/Settings/Profile"]')
+    def __init__(self):
+        MainPage.__init__(self)
+        self.url='/Settings/'
+        self.accounttab='//a[@href="/Settings/Account"]'
+        self.profiletab='//a[@href="/Settings/Profile"]'
+

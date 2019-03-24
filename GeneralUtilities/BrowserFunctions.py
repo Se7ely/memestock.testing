@@ -4,28 +4,29 @@ from selenium.webdriver import ActionChains
 
 baseurl='http://localhost:3000'
 
-def FirefoxLoad():
+
+def FirefoxLoad(url):
     binary='C:\\Program Files\\Mozilla Firefox\\firefox.exe'
     driver = webdriver.Firefox(firefox_binary=binary)
     driver.maximize_window()
     driver.implicitly_wait(3)
-    driver.get(baseurl)
+    driver.get(baseurl+url)
     return driver
 
-def ChromeLoad():
+def ChromeLoad(url):
     driverlocation = "C:\\Users\\XYZ\\venv\\Lib\\site-packages\\selenium\\chromedriver.exe"
     os.environ["webdriver.chrome.driver"] = driverlocation
     driver = webdriver.Chrome(driverlocation)
     driver.maximize_window()
     driver.implicitly_wait(3)
-    driver.get(baseurl)
+    driver.get(baseurl+url)
     return driver
 
-def BrowserLoad(browser):
+def BrowserLoad(browser='chrome',url=''):
     if 'chrome'in browser:
-        driver=ChromeLoad()
+        driver=ChromeLoad(url)
     else:
-        driver=FirefoxLoad()
+        driver=FirefoxLoad(url)
     return driver
 
 def Scroll(direction,driver):

@@ -22,7 +22,10 @@ mp.notificationsbutton.click()
 mp.searchbar.send_keys('ok ?')
 time.sleep(3)
 mp.searchbar.clear()
+mp.logobutton.click()
+print(str(mp.IsOn()))
 mp.searchbar.send_keys(Keys.ENTER)
+
 mp.driver.close()
 
 

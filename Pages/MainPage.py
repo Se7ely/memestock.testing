@@ -1,27 +1,27 @@
 from selenium import webdriver
 from GeneralUtilities import BrowserFunctions
+from Pages.Page import Page
+class MainPage(Page):
 
-class MainPage():
+    def __init__(self,):
 
-    def __init__(self,driver):
+        Page.__init__(self)
+        self.url='/Home/'
+        self.totopanchor='//a[@href="#top"]'
+        self.logobutton='//a[text()="Memestock"]'
 
-        self.driver=driver
+        self.listingsdrop='//button[text()="Dropdown"]'
+        self.normallisting='//a[text()="Home"]'
+        self.popularlisting ='//a[text()="Popular"]'
+        self.alllisting = '//a[text()="All"]'
+        self.hotlisting ='//a[text()="Hot"]'
 
-        self.totopanchor=self.driver.find_element_by_xpath('//a[@href="#top"]')
-        self.logobutton=self.driver.find_element_by_xpath('//a[text()="Memestock"]')
+        self.searchbar='//input[@class="memeSearch"]'
+        self.pmbutton ='//a[@href="/PM/"]'
+        self.createpostbutton='//a[@href="/CreatePost/"]'
+        self.notificationsbutton='//a[text()="Notifications"]'#expect change due to ambigious functionality
 
-        self.listingsdrop=self.driver.find_element_by_xpath('//button[text()="Dropdown"]')
-        self.normallisting=self.driver.find_element_by_xpath('//a[text()="Home"]')
-        self.popularlisting = self.driver.find_element_by_xpath('//a[text()="Popular"]')
-        self.alllisting = self.driver.find_element_by_xpath('//a[text()="All"]')
-        self.hotlisting = self.driver.find_element_by_xpath('//a[text()="Hot"]')
-
-        self.searchbar=self.driver.find_element_by_xpath('//input[@class="memeSearch"]')
-        self.pmbutton = self.driver.find_element_by_xpath('//a[@href="/PM/"]')
-        self.createpostbutton= self.driver.find_element_by_xpath('//a[@href="/CreatePost/"]')
-        self.notificationsbutton= self.driver.find_element_by_xpath('//a[text()="Notifications"]')#expect change due to ambigious functionality
-
-        self.yourstuffdrop= self.driver.find_element_by_xpath('//button[text()="YOUR STUFF"]')
-        self.myprofile=self.driver.find_element_by_xpath('//a[@href="/My profile/"]')
-        self.usersettings=self.driver.find_element_by_xpath('//a[@href="/Settings/"]')
+        self.yourstuffdrop='//button[text()="YOUR STUFF"]'
+        self.myprofile='//a[@href="/My profile/"]'
+        self.usersettings='//a[@href="/Settings/"]'
 

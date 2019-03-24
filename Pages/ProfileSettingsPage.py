@@ -1,10 +1,11 @@
 from Pages.UserSettingsPage import UserSettingsPage
-
+from GeneralUtilities import BrowserFunctions
 class ProfileSettingsPage(UserSettingsPage):
 
-    url='/Settings/Profile'
+
 
     def __init__(self,driver):
-        UserSettingsPage.__init__(self,driver)
-        self.displaynamefield = self.driver.find_element_by_xpath('//input[@placeholder="Display Name (optional)"]')
-        self.biofield = self.driver.find_element_by_xpath('//textarea[@placeholder="About (optional)"]')
+        UserSettingsPage.__init__(self)
+        self.url='/Settings/Profile'
+        self.displaynamefield = '//input[@placeholder="Display Name (optional)"]'
+        self.biofield = '//textarea[@placeholder="About (optional)"]'
