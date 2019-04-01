@@ -22,7 +22,7 @@ def ChromeLoad(url):
     driver.get(baseurl+url)
     return driver
 
-def BrowserLoad(browser='chrome',url=''):
+def BrowserLoad(browser='firefox',url=''):
     if 'chrome'in browser:
         driver=ChromeLoad(url)
     else:

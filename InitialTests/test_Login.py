@@ -2,6 +2,8 @@ from GeneralUtilities import BrowserFunctions
 from Pages.LoginPage import LoginPage
 from Pages.MainPage import MainPage
 import unittest, pytest
+import pytest_html
+
 from ddt import ddt, data, unpack
 
 
@@ -23,7 +25,7 @@ class TestLogin():
         lp.Getpasswordfield(Setup).send_keys('s2sghjgksdfg')
         lp.Getloginbutton(Setup).click()
         mp=MainPage()
-
+        Setup.save_screenshot("Test1.png")
         assert mp.IsOn(Setup)
 
     def test_InvalidLogin(self,Setup):
@@ -31,6 +33,7 @@ class TestLogin():
         lp = LoginPage()
         lp.Getpasswordfield(Setup).send_keys('1yre')
         lp.Getloginbutton(Setup).click()
+        Setup.save_screenshot("Test2.png")
 
         assert lp.ErrorDisplayed(Setup)
 

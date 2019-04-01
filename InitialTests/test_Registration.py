@@ -24,7 +24,7 @@ class TestRegistration():
         rp.Getpasswordfield(Setup).send_keys('s2sghjgksdfg')
         rp.GetRegisterbutton(Setup).click()
         mp=MainPage()
-        print(Setup.current_url)
+        Setup.save_screenshot("Test3.png")
 
         assert mp.IsOn(Setup)
 
@@ -33,6 +33,7 @@ class TestRegistration():
         rp = RegisterPage()
         rp.Getpasswordfield(Setup).send_keys('1yre')
         rp.GetRegisterbutton(Setup).click()
+        Setup.save_screenshot("Test4.png")
 
         assert rp.ErrorDisplayed(Setup)
 
