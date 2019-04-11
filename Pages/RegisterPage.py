@@ -12,7 +12,7 @@ class RegisterPage(Page):
         self.emailfield='//input[@placeholder="E-mail"]'
         self.usernamefield='//input[@placeholder="User name"]'
         self.passwordfield='//input[@placeholder="Password"]'
-        self.registerbutton='//button[contains(text(),"Register")]'
+        self.registerbutton='//button[@class="registerButton"]'
         self.alreadyregistered='//a[@href="/Login/"]'
 
     def ErrorDisplayed(self,driver):
