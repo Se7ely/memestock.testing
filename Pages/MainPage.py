@@ -35,6 +35,7 @@ class MainPage(Page):
         lp.Getusernamefield(driver).send_keys('mostafa_hazem')
         lp.Getpasswordfield(driver).send_keys('12345678')
         lp.Getloginbutton(driver).click()
+        return
 
     def Gettotopanchor(self,driver):
         return driver.find_element_by_xpath(self.totopanchor)
