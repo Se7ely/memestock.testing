@@ -10,5 +10,6 @@ def pytest_runtest_makereport(item, call):
         xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
             # only add additional html on failure
-            extra.append(pytest_html.extras.png('Test1.png'))
+            extra.append(pytest_html.extras.png('Test2.png'))
         report.extra = extra
+

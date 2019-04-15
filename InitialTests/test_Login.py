@@ -19,26 +19,44 @@ def Setup():
 @pytest.mark.usefixtures('Setup')
 class TestLogin():
 
-    def test_ValidLogin(self,Setup):
+    def test_LoginSuccesful(self,Setup):
 
         lp=LoginPage()
-        lp.Getpasswordfield(Setup).send_keys('s2sghjgksdfg')
+        lp.Getusernamefield(Setup).send_keys('mostafa_hazem')
+        lp.Getpasswordfield(Setup).send_keys('12345678')
         lp.Getloginbutton(Setup).click()
         mp=MainPage()
-        Setup.save_screenshot("Test1.png")
+        Setup.save_screenshot("Test2.png")
         assert mp.IsOn(Setup)
 
-    def test_InvalidLogin(self,Setup):
+    def test_LoginFailedInvalidPassword(self,Setup):
 
         lp = LoginPage()
+        lp.Getusernamefield(Setup).send_keys('mostafa_hazem')
         lp.Getpasswordfield(Setup).send_keys('1yre')
         lp.Getloginbutton(Setup).click()
         Setup.save_screenshot("Test2.png")
 
         assert lp.ErrorDisplayed(Setup)
 
+    def test_LoginFailedIncorrectPassword(self,Setup):
 
-        """ 
-    def CleanUp(self):
-        self.driver.
-        """
+        lp = LoginPage()
+        lp.Getusernamefield(Setup).send_keys('mostafa_hazem')
+        lp.Getpasswordfield(Setup).send_keys('1231234246732')
+        lp.Getloginbutton(Setup).click()
+        Setup.save_screenshot("Test2.png")
+
+        assert lp.ErrorDisplayed(Setup)
+
+    def test_LoginFailedIncorrectUsername(self, Setup):
+        lp = LoginPage()
+        lp.Getusernamefield(Setup).send_keys('Mostafa.Hazem')
+        lp.Getpasswordfield(Setup).send_keys('12345678')
+        lp.Getloginbutton(Setup).click()
+        Setup.save_screenshot("Test2.png")
+
+        assert lp.ErrorDisplayed(Setup)
+
+
+

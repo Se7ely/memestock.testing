@@ -16,12 +16,18 @@ class RegisterPage(Page):
         self.alreadyregistered='//a[@href="/Login/"]'
 
     def ErrorDisplayed(self,driver):
-        error=driver.find_elements_by_xpath('//p[@class="Registration_Invalid__3zjtz"]')
+        error=driver.find_elements_by_xpath('//*[@class="Registration_Invalid__3zjtz"]')
         return len(error)>0
     def Getpasswordfield(self,driver):
         return driver.find_element_by_xpath(self.passwordfield)
 
     def GetRegisterbutton(self,driver):
         return driver.find_element_by_xpath(self.registerbutton)
+
+    def Getusernamefield(self,driver):
+        return driver.find_element_by_xpath(self.usernamefield)
+
+    def Getemailfield(self,driver):
+        return driver.find_element_by_xpath(self.emailfield)
 
 

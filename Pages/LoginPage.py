@@ -13,6 +13,9 @@ class LoginPage(Page):
         self.loginbutton='//button[contains(text(),"Login")]'
         self.createaccount='//a[@href="/Registration/"]'
 
+    def Getusernamefield(self, driver):
+        return driver.find_element_by_xpath(self.usernamefield)
+
     def Getpasswordfield(self,driver):
         return driver.find_element_by_xpath(self.passwordfield)
 
@@ -20,7 +23,7 @@ class LoginPage(Page):
         return driver.find_element_by_xpath(self.loginbutton)
 
     def ErrorDisplayed(self,driver):
-        error=driver.find_elements_by_xpath('//p[@class="Login_Invalid__3998w"]')
+        error=driver.find_elements_by_xpath('//*[@class="Login_Invalid__3998w"]')
         return len(error)>0
 
     def Redirect(self,driver):#this is completely wrong it is just a method to overcome shorthandness in react routing

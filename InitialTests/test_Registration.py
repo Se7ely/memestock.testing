@@ -7,8 +7,6 @@ from ddt import ddt, data, unpack
 
 @pytest.fixture()
 def Setup():
-    """ create tester object """
-    # how to use the list below for arg?
 
     driver=BrowserFunctions.BrowserLoad()
 
@@ -18,9 +16,11 @@ def Setup():
 @pytest.mark.usefixtures('Setup')
 class TestRegistration():
 
-    def test_ValidRegistration(self,Setup):
+    def test_RegistrationSuccesful(self,Setup):
 
         rp=RegisterPage()
+        rp.Getusernamefield(Setup).send_keys('testingbro')
+        rp.Getemailfield(Setup).send_keys('tbro@testman.com')
         rp.Getpasswordfield(Setup).send_keys('s2sghjgksdfg')
         rp.GetRegisterbutton(Setup).click()
         mp=MainPage()
@@ -28,19 +28,28 @@ class TestRegistration():
 
         assert mp.IsOn(Setup)
 
-    def test_InvalidRegistration(self,Setup):
+    def test_RegistrationFailedPasswordInvalid(self,Setup):
 
         rp = RegisterPage()
+        rp.Getusernamefield(Setup).send_keys('testingbro')
+        rp.Getemailfield(Setup).send_keys('tbro@testman.com')
         rp.Getpasswordfield(Setup).send_keys('1yre')
         rp.GetRegisterbutton(Setup).click()
         Setup.save_screenshot("Test4.png")
 
         assert rp.ErrorDisplayed(Setup)
 
+    """
+    
+    Implement the following cases when frontend team delivers design
+        1. Username Invalid
+            a. Repitition
+            b. Format
+        2. Email Invalid
+            a. Repitition
+            b. Format
+    """
 
-        """ 
-    def CleanUp(self):
-        self.driver.
-        """
+
 
 
