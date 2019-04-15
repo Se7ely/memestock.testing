@@ -60,7 +60,7 @@ class MainPage(Page):
     def GetThreads(self,driver):
         threadslist=[]
         for i in range(len(driver.find_elements_by_xpath(self.threads))):
-            threadslist.append(Thread(i))
+            threadslist.append(Thread(i+1))
 
         return threadslist
 
