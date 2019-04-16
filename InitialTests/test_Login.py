@@ -2,7 +2,6 @@ from GeneralUtilities import BrowserFunctions
 from Pages.LoginPage import LoginPage
 from Pages.MainPage import MainPage
 import unittest, pytest
-import pytest_html
 
 from ddt import ddt, data, unpack
 

@@ -30,4 +30,8 @@ class RegisterPage(Page):
     def Getemailfield(self,driver):
         return driver.find_element_by_xpath(self.emailfield)
 
+    def Getalreadyregistered(self,driver):
+        return driver.find_element_by_xpath(self.alreadyregistered)
+
+
 

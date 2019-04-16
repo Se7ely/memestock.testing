@@ -28,7 +28,7 @@ class LoginPage(Page):
 
     def Redirect(self,driver):#this is completely wrong it is just a method to overcome shorthandness in react routing
         rp=RegisterPage()
-        driver.find_element_by_xpath(rp.alreadyregistered).click()
+        rp.Getalreadyregistered(driver).click()
 
 
 

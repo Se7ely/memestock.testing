@@ -16,8 +16,3 @@ class ProfileSettingsPage(UserSettingsPage):
     def Getbiofield(self, driver):
         return driver.find_element_by_xpath(self.biofield)
 
-    def Redirect(self,driver):
-        us=UserSettingsPage()
-        us.Redirect(driver)
-        us.Getprofiletab(driver).click()
-        return

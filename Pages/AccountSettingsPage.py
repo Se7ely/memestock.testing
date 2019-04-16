@@ -35,9 +35,3 @@ class AccountSettingsPage(UserSettingsPage):
 
     def Getnewpassword(self,driver):
         return driver.find_element_by_xpath(self.newPassword)
-
-    def Redirect(self,driver):
-        us=UserSettingsPage()
-        us.Redirect(driver)
-        us.Getaccounttab(driver).click()
-        return
