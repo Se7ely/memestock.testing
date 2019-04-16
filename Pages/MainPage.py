@@ -23,7 +23,7 @@ class MainPage(Page):
         self.notificationsbutton='//a[text()="Notifications"]'#expect change due to ambigious functionality
 
         self.yourstuffdrop='//div[@class="yourStuffDropList"]//preceding-sibling::button'
-        self.myprofile='//a[@href="/My profile/"]'
+        self.myprofile='//a[@href="/user/"]'
         self.usersettings='//a[@href="/Settings/"]'
 
         self.threads='//div[@class="threadContainer"]'
@@ -60,7 +60,8 @@ class MainPage(Page):
     def Getusersettings(self,driver):
         return driver.find_element_by_xpath(self.usersettings)
 
-
+    def GetMyProfile(self,driver):
+        return driver.find_element_by_xpath(self.myprofile)
 
     def Getyourstuffdrop(self,driver):
         return driver.find_element_by_xpath(self.yourstuffdrop)
