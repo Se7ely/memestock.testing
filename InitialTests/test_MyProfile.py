@@ -30,3 +30,9 @@ class TestMyProfile():
         except:
             assert False
         assert True
+
+    def test_Refresh(self,Setup):
+        mpp=MyProfilePage()
+        Setup.refresh()
+        assert mpp.IsOn(Setup)
+        #add assert checking content is still on page

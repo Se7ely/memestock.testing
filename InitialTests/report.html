@@ -235,7 +235,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 17-Apr-2019 at 00:37:03 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v1.20.0</p>
+    <p>Report generated on 17-Apr-2019 at 01:05:41 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v1.20.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -260,8 +260,8 @@ function filter_table(elem) {
         <td>Python</td>
         <td>3.6.5</td></tr></table>
     <h2>Summary</h2>
-    <p>24 tests ran in 212.13 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">16 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">8 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>24 tests ran in 218.42 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">16 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">8 failed</span>, <input checked="true" class="filter" data-test-result="error" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">2 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -272,6 +272,24 @@ function filter_table(elem) {
           <th>Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="error results-table-row">
+        <tr>
+          <td class="col-result">Error</td>
+          <td class="col-name">test_Settings.py::TestSettings::test_ProfileSettingsElementsDisplayed::setup</td>
+          <td class="col-duration">7.32</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">@pytest.fixture()<br/>    def Setup():<br/>    <br/>        driver=BrowserFunctions.BrowserLoad()<br/>        usp= UserSettingsPage()<br/>&gt;       usp.Redirect(driver)<br/><br/>test_Settings.py:14: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>..\Pages\UserSettingsPage.py:28: in Redirect<br/>    mp.Getusersettings(driver).click()<br/>c:\users\xyz\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\remote\webelement.py:80: in click<br/>    self._execute(Command.CLICK_ELEMENT)<br/>c:\users\xyz\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\remote\webelement.py:633: in _execute<br/>    return self._parent.execute(command, params)<br/>c:\users\xyz\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\remote\webdriver.py:321: in execute<br/>    self.error_handler.check_response(response)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x0403CF90&gt;<br/>response = {&#x27;status&#x27;: 400, &#x27;value&#x27;: &#x27;{&quot;value&quot;:{&quot;error&quot;:&quot;element not interactable&quot;,&quot;message&quot;:&quot;Element &lt;a class=\\&quot;stfitm\\&quot; href=\...te@chrome://marionette/content/listener.js:410:13\\nclickElement@chrome://marionette/content/listener.js:1210:5\\n&quot;}}&#x27;}<br/><br/>    def check_response(self, response):<br/>        &quot;&quot;&quot;<br/>        Checks that a JSON response from the WebDriver does not have an error.<br/>    <br/>        :Args:<br/>         - response - The JSON response from the WebDriver server as a dictionary<br/>           object.<br/>    <br/>        :Raises: If the response contains an error message.<br/>        &quot;&quot;&quot;<br/>        status = response.get(&#x27;status&#x27;, None)<br/>        if status is None or status == ErrorCode.SUCCESS:<br/>            return<br/>        value = None<br/>        message = response.get(&quot;message&quot;, &quot;&quot;)<br/>        screen = response.get(&quot;screen&quot;, &quot;&quot;)<br/>        stacktrace = None<br/>        if isinstance(status, int):<br/>            value_json = response.get(&#x27;value&#x27;, None)<br/>            if value_json and isinstance(value_json, basestring):<br/>                import json<br/>                try:<br/>                    value = json.loads(value_json)<br/>                    if len(value.keys()) == 1:<br/>                        value = value[&#x27;value&#x27;]<br/>                    status = value.get(&#x27;error&#x27;, None)<br/>                    if status is None:<br/>                        status = value[&quot;status&quot;]<br/>                        message = value[&quot;value&quot;]<br/>                        if not isinstance(message, basestring):<br/>                            value = message<br/>                            message = message.get(&#x27;message&#x27;)<br/>                    else:<br/>                        message = value.get(&#x27;message&#x27;, None)<br/>                except ValueError:<br/>                    pass<br/>    <br/>        exception_class = ErrorInResponseException<br/>        if status in ErrorCode.NO_SUCH_ELEMENT:<br/>            exception_class = NoSuchElementException<br/>        elif status in ErrorCode.NO_SUCH_FRAME:<br/>            exception_class = NoSuchFrameException<br/>        elif status in ErrorCode.NO_SUCH_WINDOW:<br/>            exception_class = NoSuchWindowException<br/>        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:<br/>            exception_class = StaleElementReferenceException<br/>        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:<br/>            exception_class = ElementNotVisibleException<br/>        elif status in ErrorCode.INVALID_ELEMENT_STATE:<br/>            exception_class = InvalidElementStateException<br/>        elif status in ErrorCode.INVALID_SELECTOR \<br/>                or status in ErrorCode.INVALID_XPATH_SELECTOR \<br/>                or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER:<br/>            exception_class = InvalidSelectorException<br/>        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:<br/>            exception_class = ElementNotSelectableException<br/>        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:<br/>            exception_class = ElementNotInteractableException<br/>        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:<br/>            exception_class = InvalidCookieDomainException<br/>        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:<br/>            exception_class = UnableToSetCookieException<br/>        elif status in ErrorCode.TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.SCRIPT_TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.UNKNOWN_ERROR:<br/>            exception_class = WebDriverException<br/>        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:<br/>            exception_class = UnexpectedAlertPresentException<br/>        elif status in ErrorCode.NO_ALERT_OPEN:<br/>            exception_class = NoAlertPresentException<br/>        elif status in ErrorCode.IME_NOT_AVAILABLE:<br/>            exception_class = ImeNotAvailableException<br/>        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:<br/>            exception_class = ImeActivationFailedException<br/>        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:<br/>            exception_class = MoveTargetOutOfBoundsException<br/>        elif status in ErrorCode.JAVASCRIPT_ERROR:<br/>            exception_class = JavascriptException<br/>        elif status in ErrorCode.SESSION_NOT_CREATED:<br/>            exception_class = SessionNotCreatedException<br/>        elif status in ErrorCode.INVALID_ARGUMENT:<br/>            exception_class = InvalidArgumentException<br/>        elif status in ErrorCode.NO_SUCH_COOKIE:<br/>            exception_class = NoSuchCookieException<br/>        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:<br/>            exception_class = ScreenshotException<br/>        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:<br/>            exception_class = ElementClickInterceptedException<br/>        elif status in ErrorCode.INSECURE_CERTIFICATE:<br/>            exception_class = InsecureCertificateException<br/>        elif status in ErrorCode.INVALID_COORDINATES:<br/>            exception_class = InvalidCoordinatesException<br/>        elif status in ErrorCode.INVALID_SESSION_ID:<br/>            exception_class = InvalidSessionIdException<br/>        elif status in ErrorCode.UNKNOWN_METHOD:<br/>            exception_class = UnknownMethodException<br/>        else:<br/>            exception_class = WebDriverException<br/>        if value == &#x27;&#x27; or value is None:<br/>            value = response[&#x27;value&#x27;]<br/>        if isinstance(value, basestring):<br/>            if exception_class == ErrorInResponseException:<br/>                raise exception_class(response, value)<br/>            raise exception_class(value)<br/>        if message == &quot;&quot; and &#x27;message&#x27; in value:<br/>            message = value[&#x27;message&#x27;]<br/>    <br/>        screen = None<br/>        if &#x27;screen&#x27; in value:<br/>            screen = value[&#x27;screen&#x27;]<br/>    <br/>        stacktrace = None<br/>        if &#x27;stackTrace&#x27; in value and value[&#x27;stackTrace&#x27;]:<br/>            stacktrace = []<br/>            try:<br/>                for frame in value[&#x27;stackTrace&#x27;]:<br/>                    line = self._value_or_default(frame, &#x27;lineNumber&#x27;, &#x27;&#x27;)<br/>                    file = self._value_or_default(frame, &#x27;fileName&#x27;, &#x27;&lt;anonymous&gt;&#x27;)<br/>                    if line:<br/>                        file = &quot;%s:%s&quot; % (file, line)<br/>                    meth = self._value_or_default(frame, &#x27;methodName&#x27;, &#x27;&lt;anonymous&gt;&#x27;)<br/>                    if &#x27;className&#x27; in frame:<br/>                        meth = &quot;%s.%s&quot; % (frame[&#x27;className&#x27;], meth)<br/>                    msg = &quot;    at %s (%s)&quot;<br/>                    msg = msg % (meth, file)<br/>                    stacktrace.append(msg)<br/>            except TypeError:<br/>                pass<br/>        if exception_class == ErrorInResponseException:<br/>            raise exception_class(response, message)<br/>        elif exception_class == UnexpectedAlertPresentException:<br/>            alert_text = None<br/>            if &#x27;data&#x27; in value:<br/>                alert_text = value[&#x27;data&#x27;].get(&#x27;text&#x27;)<br/>            elif &#x27;alert&#x27; in value:<br/>                alert_text = value[&#x27;alert&#x27;].get(&#x27;text&#x27;)<br/>            raise exception_class(message, screen, stacktrace, alert_text)<br/>&gt;       raise exception_class(message, screen, stacktrace)<br/><span class="error">E       selenium.common.exceptions.ElementNotInteractableException: Message: Element &lt;a class=&quot;stfitm&quot; href=&quot;/Settings/&quot;&gt; could not be scrolled into view</span><br/><br/>c:\users\xyz\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py:242: ElementNotInteractableException<br/></div></td></tr></tbody>
+      <tbody class="error results-table-row">
+        <tr>
+          <td class="col-result">Error</td>
+          <td class="col-name">test_Settings.py::TestSettings::test_Refresh::setup</td>
+          <td class="col-duration">7.30</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">@pytest.fixture()<br/>    def Setup():<br/>    <br/>        driver=BrowserFunctions.BrowserLoad()<br/>        usp= UserSettingsPage()<br/>&gt;       usp.Redirect(driver)<br/><br/>test_Settings.py:14: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>..\Pages\UserSettingsPage.py:28: in Redirect<br/>    mp.Getusersettings(driver).click()<br/>c:\users\xyz\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\remote\webelement.py:80: in click<br/>    self._execute(Command.CLICK_ELEMENT)<br/>c:\users\xyz\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\remote\webelement.py:633: in _execute<br/>    return self._parent.execute(command, params)<br/>c:\users\xyz\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\remote\webdriver.py:321: in execute<br/>    self.error_handler.check_response(response)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x040053F0&gt;<br/>response = {&#x27;status&#x27;: 400, &#x27;value&#x27;: &#x27;{&quot;value&quot;:{&quot;error&quot;:&quot;element not interactable&quot;,&quot;message&quot;:&quot;Element &lt;a class=\\&quot;stfitm\\&quot; href=\...te@chrome://marionette/content/listener.js:410:13\\nclickElement@chrome://marionette/content/listener.js:1210:5\\n&quot;}}&#x27;}<br/><br/>    def check_response(self, response):<br/>        &quot;&quot;&quot;<br/>        Checks that a JSON response from the WebDriver does not have an error.<br/>    <br/>        :Args:<br/>         - response - The JSON response from the WebDriver server as a dictionary<br/>           object.<br/>    <br/>        :Raises: If the response contains an error message.<br/>        &quot;&quot;&quot;<br/>        status = response.get(&#x27;status&#x27;, None)<br/>        if status is None or status == ErrorCode.SUCCESS:<br/>            return<br/>        value = None<br/>        message = response.get(&quot;message&quot;, &quot;&quot;)<br/>        screen = response.get(&quot;screen&quot;, &quot;&quot;)<br/>        stacktrace = None<br/>        if isinstance(status, int):<br/>            value_json = response.get(&#x27;value&#x27;, None)<br/>            if value_json and isinstance(value_json, basestring):<br/>                import json<br/>                try:<br/>                    value = json.loads(value_json)<br/>                    if len(value.keys()) == 1:<br/>                        value = value[&#x27;value&#x27;]<br/>                    status = value.get(&#x27;error&#x27;, None)<br/>                    if status is None:<br/>                        status = value[&quot;status&quot;]<br/>                        message = value[&quot;value&quot;]<br/>                        if not isinstance(message, basestring):<br/>                            value = message<br/>                            message = message.get(&#x27;message&#x27;)<br/>                    else:<br/>                        message = value.get(&#x27;message&#x27;, None)<br/>                except ValueError:<br/>                    pass<br/>    <br/>        exception_class = ErrorInResponseException<br/>        if status in ErrorCode.NO_SUCH_ELEMENT:<br/>            exception_class = NoSuchElementException<br/>        elif status in ErrorCode.NO_SUCH_FRAME:<br/>            exception_class = NoSuchFrameException<br/>        elif status in ErrorCode.NO_SUCH_WINDOW:<br/>            exception_class = NoSuchWindowException<br/>        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:<br/>            exception_class = StaleElementReferenceException<br/>        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:<br/>            exception_class = ElementNotVisibleException<br/>        elif status in ErrorCode.INVALID_ELEMENT_STATE:<br/>            exception_class = InvalidElementStateException<br/>        elif status in ErrorCode.INVALID_SELECTOR \<br/>                or status in ErrorCode.INVALID_XPATH_SELECTOR \<br/>                or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER:<br/>            exception_class = InvalidSelectorException<br/>        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:<br/>            exception_class = ElementNotSelectableException<br/>        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:<br/>            exception_class = ElementNotInteractableException<br/>        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:<br/>            exception_class = InvalidCookieDomainException<br/>        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:<br/>            exception_class = UnableToSetCookieException<br/>        elif status in ErrorCode.TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.SCRIPT_TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.UNKNOWN_ERROR:<br/>            exception_class = WebDriverException<br/>        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:<br/>            exception_class = UnexpectedAlertPresentException<br/>        elif status in ErrorCode.NO_ALERT_OPEN:<br/>            exception_class = NoAlertPresentException<br/>        elif status in ErrorCode.IME_NOT_AVAILABLE:<br/>            exception_class = ImeNotAvailableException<br/>        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:<br/>            exception_class = ImeActivationFailedException<br/>        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:<br/>            exception_class = MoveTargetOutOfBoundsException<br/>        elif status in ErrorCode.JAVASCRIPT_ERROR:<br/>            exception_class = JavascriptException<br/>        elif status in ErrorCode.SESSION_NOT_CREATED:<br/>            exception_class = SessionNotCreatedException<br/>        elif status in ErrorCode.INVALID_ARGUMENT:<br/>            exception_class = InvalidArgumentException<br/>        elif status in ErrorCode.NO_SUCH_COOKIE:<br/>            exception_class = NoSuchCookieException<br/>        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:<br/>            exception_class = ScreenshotException<br/>        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:<br/>            exception_class = ElementClickInterceptedException<br/>        elif status in ErrorCode.INSECURE_CERTIFICATE:<br/>            exception_class = InsecureCertificateException<br/>        elif status in ErrorCode.INVALID_COORDINATES:<br/>            exception_class = InvalidCoordinatesException<br/>        elif status in ErrorCode.INVALID_SESSION_ID:<br/>            exception_class = InvalidSessionIdException<br/>        elif status in ErrorCode.UNKNOWN_METHOD:<br/>            exception_class = UnknownMethodException<br/>        else:<br/>            exception_class = WebDriverException<br/>        if value == &#x27;&#x27; or value is None:<br/>            value = response[&#x27;value&#x27;]<br/>        if isinstance(value, basestring):<br/>            if exception_class == ErrorInResponseException:<br/>                raise exception_class(response, value)<br/>            raise exception_class(value)<br/>        if message == &quot;&quot; and &#x27;message&#x27; in value:<br/>            message = value[&#x27;message&#x27;]<br/>    <br/>        screen = None<br/>        if &#x27;screen&#x27; in value:<br/>            screen = value[&#x27;screen&#x27;]<br/>    <br/>        stacktrace = None<br/>        if &#x27;stackTrace&#x27; in value and value[&#x27;stackTrace&#x27;]:<br/>            stacktrace = []<br/>            try:<br/>                for frame in value[&#x27;stackTrace&#x27;]:<br/>                    line = self._value_or_default(frame, &#x27;lineNumber&#x27;, &#x27;&#x27;)<br/>                    file = self._value_or_default(frame, &#x27;fileName&#x27;, &#x27;&lt;anonymous&gt;&#x27;)<br/>                    if line:<br/>                        file = &quot;%s:%s&quot; % (file, line)<br/>                    meth = self._value_or_default(frame, &#x27;methodName&#x27;, &#x27;&lt;anonymous&gt;&#x27;)<br/>                    if &#x27;className&#x27; in frame:<br/>                        meth = &quot;%s.%s&quot; % (frame[&#x27;className&#x27;], meth)<br/>                    msg = &quot;    at %s (%s)&quot;<br/>                    msg = msg % (meth, file)<br/>                    stacktrace.append(msg)<br/>            except TypeError:<br/>                pass<br/>        if exception_class == ErrorInResponseException:<br/>            raise exception_class(response, message)<br/>        elif exception_class == UnexpectedAlertPresentException:<br/>            alert_text = None<br/>            if &#x27;data&#x27; in value:<br/>                alert_text = value[&#x27;data&#x27;].get(&#x27;text&#x27;)<br/>            elif &#x27;alert&#x27; in value:<br/>                alert_text = value[&#x27;alert&#x27;].get(&#x27;text&#x27;)<br/>            raise exception_class(message, screen, stacktrace, alert_text)<br/>&gt;       raise exception_class(message, screen, stacktrace)<br/><span class="error">E       selenium.common.exceptions.ElementNotInteractableException: Message: Element &lt;a class=&quot;stfitm&quot; href=&quot;/Settings/&quot;&gt; could not be scrolled into view</span><br/><br/>c:\users\xyz\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py:242: ElementNotInteractableException<br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
@@ -280,38 +298,38 @@ function filter_table(elem) {
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-33-47.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-33-47.png"/></a></div>
-            <div class="log">self = &lt;InitialTests.test_CreatePost.TestCreatePost object at 0x043FF850&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;f05ca8e7-47fe-4e3c-b2dd-d3ee1b864f60&quot;)&gt;<br/><br/>    def test_CreatePost(self,Setup):<br/>        cpp=CreatePostPage()<br/>        cpp.Getsubredditfield(Setup).send_keys(&#x27;sfghjkjyjurytryhtjfgkh&#x27;)<br/>        cpp.Gettitlefield(Setup).send_keys(&#x27;YTTHJFTYHJUYGH&#x27;)<br/>        cpp.Getbodyfield(Setup).send_keys(&#x27;dadewfwegrhhsgsehshrsh, rgerhrgwrgewwegwegwege&#x27;)<br/>        cpp.Getcreatebutton(Setup).click()<br/>        #add assert onpage when their is response<br/>        #add assert post is created as input<br/>&gt;       assert False<br/><span class="error">E       assert False</span><br/><br/>test_CreatePost.py:40: AssertionError<br/></div></td></tr></tbody>
+            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\01-02-18.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\01-02-18.png"/></a></div>
+            <div class="log">self = &lt;InitialTests.test_CreatePost.TestCreatePost object at 0x03E8D730&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;9ac9c2b4-bffe-4105-ac17-da9db6a3040f&quot;)&gt;<br/><br/>    def test_CreatePost(self,Setup):<br/>        cpp=CreatePostPage()<br/>        cpp.Getsubredditfield(Setup).send_keys(&#x27;sfghjkjyjurytryhtjfgkh&#x27;)<br/>        cpp.Gettitlefield(Setup).send_keys(&#x27;YTTHJFTYHJUYGH&#x27;)<br/>        cpp.Getbodyfield(Setup).send_keys(&#x27;dadewfwegrhhsgsehshrsh, rgerhrgwrgewwegwegwege&#x27;)<br/>        cpp.Getcreatebutton(Setup).click()<br/>        #add assert onpage when their is response<br/>        #add assert post is created as input<br/>&gt;       assert False<br/><span class="error">E       assert False</span><br/><br/>test_CreatePost.py:40: AssertionError<br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test_CreatePost.py::TestCreatePost::test_Refresh</td>
-          <td class="col-duration">1.15</td>
+          <td class="col-duration">0.93</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-33-56.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-33-56.png"/></a></div>
-            <div class="log">self = &lt;InitialTests.test_CreatePost.TestCreatePost object at 0x0448A0F0&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;fda3a8e7-3c18-4de0-9216-a6f0ee015d31&quot;)&gt;<br/><br/>    def test_Refresh(self,Setup):<br/>        cpp=CreatePostPage()<br/>        Setup.refresh()<br/>&gt;       assert cpp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.CreatePostPage.CreatePostPage object at 0x0448ACD0&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;fda3a8e7-3c18-4de0-9216-a6f0ee015d31&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.CreatePostPage.CreatePostPage object at 0x0448ACD0&gt;&gt; = &lt;Pages.CreatePostPage.CreatePostPage object at 0x0448ACD0&gt;.IsOn</span><br/><br/>test_CreatePost.py:45: AssertionError<br/></div></td></tr></tbody>
+            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\01-02-27.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\01-02-27.png"/></a></div>
+            <div class="log">self = &lt;InitialTests.test_CreatePost.TestCreatePost object at 0x03EBD090&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;0dd9fa28-15d0-445b-b4ff-b7cc4c428a01&quot;)&gt;<br/><br/>    def test_Refresh(self,Setup):<br/>        cpp=CreatePostPage()<br/>        Setup.refresh()<br/>&gt;       assert cpp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.CreatePostPage.CreatePostPage object at 0x03EBD730&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;0dd9fa28-15d0-445b-b4ff-b7cc4c428a01&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.CreatePostPage.CreatePostPage object at 0x03EBD730&gt;&gt; = &lt;Pages.CreatePostPage.CreatePostPage object at 0x03EBD730&gt;.IsOn</span><br/><br/>test_CreatePost.py:45: AssertionError<br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test_Home.py::TestHome::test_Refresh</td>
-          <td class="col-duration">0.78</td>
+          <td class="col-duration">0.92</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-34-12.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-34-12.png"/></a></div>
-            <div class="log">self = &lt;InitialTests.test_Home.TestHome object at 0x044C6830&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;d26bcca3-5a75-453b-9fcc-f5db50774afd&quot;)&gt;<br/><br/>    def test_Refresh(self,Setup):<br/>        mp=MainPage()<br/>        Setup.refresh()<br/>&gt;       assert mp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.MainPage.MainPage object at 0x044C6530&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;d26bcca3-5a75-453b-9fcc-f5db50774afd&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.MainPage.MainPage object at 0x044C6530&gt;&gt; = &lt;Pages.MainPage.MainPage object at 0x044C6530&gt;.IsOn</span><br/><br/>test_Home.py:38: AssertionError<br/></div></td></tr></tbody>
+            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\01-02-44.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\01-02-44.png"/></a></div>
+            <div class="log">self = &lt;InitialTests.test_Home.TestHome object at 0x03F6E550&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;a0b0afb5-7aa8-4c1c-9601-fbfe3d6c5a85&quot;)&gt;<br/><br/>    def test_Refresh(self,Setup):<br/>        mp=MainPage()<br/>        Setup.refresh()<br/>&gt;       assert mp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.MainPage.MainPage object at 0x03F6E3F0&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;a0b0afb5-7aa8-4c1c-9601-fbfe3d6c5a85&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.MainPage.MainPage object at 0x03F6E3F0&gt;&gt; = &lt;Pages.MainPage.MainPage object at 0x03F6E3F0&gt;.IsOn</span><br/><br/>test_Home.py:38: AssertionError<br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test_Login.py::TestLogin::test_LoginFailedIncorrectPassword</td>
-          <td class="col-duration">3.47</td>
+          <td class="col-duration">3.44</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-34-38.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-34-38.png"/></a></div>
-            <div class="log">self = &lt;InitialTests.test_Login.TestLogin object at 0x044E73D0&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;1bfbbdbb-45d5-433c-b730-aedef7743f5e&quot;)&gt;<br/><br/>    def test_LoginFailedIncorrectPassword(self,Setup):<br/>    <br/>        lp = LoginPage()<br/>        lp.Getusernamefield(Setup).send_keys(&#x27;mostafa_hazem&#x27;)<br/>        lp.Getpasswordfield(Setup).send_keys(&#x27;1231234246732&#x27;)<br/>        lp.Getloginbutton(Setup).click()<br/>&gt;       assert lp.ErrorDisplayed(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method LoginPage.ErrorDisplayed of &lt;Pages.LoginPage.LoginPage object at 0x044C68D0&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;1bfbbdbb-45d5-433c-b730-aedef7743f5e&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method LoginPage.ErrorDisplayed of &lt;Pages.LoginPage.LoginPage object at 0x044C68D0&gt;&gt; = &lt;Pages.LoginPage.LoginPage object at 0x044C68D0&gt;.ErrorDisplayed</span><br/><br/>test_Login.py:45: AssertionError<br/></div></td></tr></tbody>
+            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\01-03-09.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\01-03-09.png"/></a></div>
+            <div class="log">self = &lt;InitialTests.test_Login.TestLogin object at 0x03F7DAF0&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;7f6536e8-4714-42cd-aef7-b8030f9a4c0c&quot;)&gt;<br/><br/>    def test_LoginFailedIncorrectPassword(self,Setup):<br/>    <br/>        lp = LoginPage()<br/>        lp.Getusernamefield(Setup).send_keys(&#x27;mostafa_hazem&#x27;)<br/>        lp.Getpasswordfield(Setup).send_keys(&#x27;1231234246732&#x27;)<br/>        lp.Getloginbutton(Setup).click()<br/>&gt;       assert lp.ErrorDisplayed(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method LoginPage.ErrorDisplayed of &lt;Pages.LoginPage.LoginPage object at 0x03F60070&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;7f6536e8-4714-42cd-aef7-b8030f9a4c0c&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method LoginPage.ErrorDisplayed of &lt;Pages.LoginPage.LoginPage object at 0x03F60070&gt;&gt; = &lt;Pages.LoginPage.LoginPage object at 0x03F60070&gt;.ErrorDisplayed</span><br/><br/>test_Login.py:45: AssertionError<br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
@@ -320,43 +338,43 @@ function filter_table(elem) {
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-34-49.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-34-49.png"/></a></div>
-            <div class="log">self = &lt;InitialTests.test_Login.TestLogin object at 0x044E76D0&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;714bcbf0-b302-469f-b617-fc84b6275eb9&quot;)&gt;<br/><br/>    def test_LoginFailedIncorrectUsername(self, Setup):<br/>        lp = LoginPage()<br/>        lp.Getusernamefield(Setup).send_keys(&#x27;Mostafa.Hazem&#x27;)<br/>        lp.Getpasswordfield(Setup).send_keys(&#x27;12345678&#x27;)<br/>        lp.Getloginbutton(Setup).click()<br/>    <br/>&gt;       assert lp.ErrorDisplayed(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method LoginPage.ErrorDisplayed of &lt;Pages.LoginPage.LoginPage object at 0x044C6990&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;714bcbf0-b302-469f-b617-fc84b6275eb9&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method LoginPage.ErrorDisplayed of &lt;Pages.LoginPage.LoginPage object at 0x044C6990&gt;&gt; = &lt;Pages.LoginPage.LoginPage object at 0x044C6990&gt;.ErrorDisplayed</span><br/><br/>test_Login.py:53: AssertionError<br/></div></td></tr></tbody>
+            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\01-03-20.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\01-03-20.png"/></a></div>
+            <div class="log">self = &lt;InitialTests.test_Login.TestLogin object at 0x03F7D630&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;1ffec895-8ed7-4f62-af45-0ade297c15cb&quot;)&gt;<br/><br/>    def test_LoginFailedIncorrectUsername(self, Setup):<br/>        lp = LoginPage()<br/>        lp.Getusernamefield(Setup).send_keys(&#x27;Mostafa.Hazem&#x27;)<br/>        lp.Getpasswordfield(Setup).send_keys(&#x27;12345678&#x27;)<br/>        lp.Getloginbutton(Setup).click()<br/>    <br/>&gt;       assert lp.ErrorDisplayed(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method LoginPage.ErrorDisplayed of &lt;Pages.LoginPage.LoginPage object at 0x04005B70&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;1ffec895-8ed7-4f62-af45-0ade297c15cb&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method LoginPage.ErrorDisplayed of &lt;Pages.LoginPage.LoginPage object at 0x04005B70&gt;&gt; = &lt;Pages.LoginPage.LoginPage object at 0x04005B70&gt;.ErrorDisplayed</span><br/><br/>test_Login.py:53: AssertionError<br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test_Login.py::TestLogin::test_Refresh</td>
-          <td class="col-duration">0.79</td>
+          <td class="col-duration">0.69</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-34-57.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-34-57.png"/></a></div>
-            <div class="log">self = &lt;InitialTests.test_Login.TestLogin object at 0x04584850&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;18642896-651c-48ec-9e60-bc520a60838d&quot;)&gt;<br/><br/>    def test_Refresh(self,Setup):<br/>        lp=LoginPage()<br/>        Setup.refresh()<br/>&gt;       assert lp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.LoginPage.LoginPage object at 0x04584F50&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;18642896-651c-48ec-9e60-bc520a60838d&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.LoginPage.LoginPage object at 0x04584F50&gt;&gt; = &lt;Pages.LoginPage.LoginPage object at 0x04584F50&gt;.IsOn</span><br/><br/>test_Login.py:58: AssertionError<br/></div></td></tr></tbody>
+            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\01-03-28.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\01-03-28.png"/></a></div>
+            <div class="log">self = &lt;InitialTests.test_Login.TestLogin object at 0x0400C690&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;5cca100a-f49b-429d-bbf7-6c141fe00b5d&quot;)&gt;<br/><br/>    def test_Refresh(self,Setup):<br/>        lp=LoginPage()<br/>        Setup.refresh()<br/>&gt;       assert lp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.LoginPage.LoginPage object at 0x0400CF70&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;5cca100a-f49b-429d-bbf7-6c141fe00b5d&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.LoginPage.LoginPage object at 0x0400CF70&gt;&gt; = &lt;Pages.LoginPage.LoginPage object at 0x0400CF70&gt;.IsOn</span><br/><br/>test_Login.py:58: AssertionError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_MyProfile.py::TestMyProfile::test_Refresh</td>
+          <td class="col-duration">0.74</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\01-03-45.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\01-03-45.png"/></a></div>
+            <div class="log">self = &lt;InitialTests.test_MyProfile.TestMyProfile object at 0x040122F0&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;57e203d3-293c-430b-afaa-fbbcc64aced6&quot;)&gt;<br/><br/>    def test_Refresh(self,Setup):<br/>        mpp=MyProfilePage()<br/>        Setup.refresh()<br/>&gt;       assert mpp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.MyProfilePage.MyProfilePage object at 0x04012B10&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;57e203d3-293c-430b-afaa-fbbcc64aced6&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.MyProfilePage.MyProfilePage object at 0x04012B10&gt;&gt; = &lt;Pages.MyProfilePage.MyProfilePage object at 0x04012B10&gt;.IsOn</span><br/><br/>test_Myprofile.py:37: AssertionError<br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test_Registration.py::TestRegistration::test_RegistrationSuccesful</td>
-          <td class="col-duration">0.46</td>
+          <td class="col-duration">0.47</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-35-04.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-35-04.png"/></a></div>
-            <div class="log">self = &lt;InitialTests.test_Registration.TestRegistration object at 0x0458DC50&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;bb5ccb89-4d0e-406e-b9a3-68e6dfe21911&quot;)&gt;<br/><br/>    def test_RegistrationSuccesful(self,Setup):<br/>    <br/>        rp=RegisterPage()<br/>        rp.Getusernamefield(Setup).send_keys(&#x27;testingbro&#x27;)<br/>        rp.Getemailfield(Setup).send_keys(&#x27;tbro@testman.com&#x27;)<br/>        rp.Getpasswordfield(Setup).send_keys(&#x27;s2sghjgksdfg&#x27;)<br/>        rp.GetRegisterbutton(Setup).click()<br/>        mp=MainPage()<br/>&gt;       assert mp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.MainPage.MainPage object at 0x0458DD10&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;bb5ccb89-4d0e-406e-b9a3-68e6dfe21911&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.MainPage.MainPage object at 0x0458DD10&gt;&gt; = &lt;Pages.MainPage.MainPage object at 0x0458DD10&gt;.IsOn</span><br/><br/>test_Registration.py:27: AssertionError<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">test_Settings.py::TestSettings::test_Refresh</td>
-          <td class="col-duration">0.85</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-36-12.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-36-12.png"/></a></div>
-            <div class="log">self = &lt;InitialTests.test_Settings.TestSettings object at 0x045A2A70&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;b2f292cb-a869-403c-96e1-b5ff776c641c&quot;)&gt;<br/><br/>    def test_Refresh(self,Setup):<br/>        usp=UserSettingsPage()<br/>        Setup.refresh()<br/>&gt;       assert usp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.UserSettingsPage.UserSettingsPage object at 0x045A2D70&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;b2f292cb-a869-403c-96e1-b5ff776c641c&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.UserSettingsPage.UserSettingsPage object at 0x045A2D70&gt;&gt; = &lt;Pages.UserSettingsPage.UserSettingsPage object at 0x045A2D70&gt;.IsOn</span><br/><br/>test_Settings.py:82: AssertionError<br/></div></td></tr></tbody>
+            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\01-03-52.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\01-03-52.png"/></a></div>
+            <div class="log">self = &lt;InitialTests.test_Registration.TestRegistration object at 0x04012570&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;6de3223c-c697-4b70-b04d-e78439aa3ea4&quot;)&gt;<br/><br/>    def test_RegistrationSuccesful(self,Setup):<br/>    <br/>        rp=RegisterPage()<br/>        rp.Getusernamefield(Setup).send_keys(&#x27;testingbro&#x27;)<br/>        rp.Getemailfield(Setup).send_keys(&#x27;tbro@testman.com&#x27;)<br/>        rp.Getpasswordfield(Setup).send_keys(&#x27;s2sghjgksdfg&#x27;)<br/>        rp.GetRegisterbutton(Setup).click()<br/>        mp=MainPage()<br/>&gt;       assert mp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.MainPage.MainPage object at 0x0400CB70&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;6de3223c-c697-4b70-b04d-e78439aa3ea4&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.MainPage.MainPage object at 0x0400CB70&gt;&gt; = &lt;Pages.MainPage.MainPage object at 0x0400CB70&gt;.IsOn</span><br/><br/>test_Registration.py:27: AssertionError<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_CreatePost.py::TestCreatePost::test_AllVitalElementsDisplayed</td>
-          <td class="col-duration">0.01</td>
+          <td class="col-duration">0.04</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -365,7 +383,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Home.py::TestHome::test_AllVitalElementsDisplayed</td>
-          <td class="col-duration">0.03</td>
+          <td class="col-duration">0.02</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -374,7 +392,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Login.py::TestLogin::test_LoginSuccesful</td>
-          <td class="col-duration">0.44</td>
+          <td class="col-duration">0.40</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -391,8 +409,17 @@ function filter_table(elem) {
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
+          <td class="col-name">test_MyProfile.py::TestMyProfile::test_MyProfileElementsDisplayed</td>
+          <td class="col-duration">0.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
           <td class="col-name">test_Registration.py::TestRegistration::test_RegistrationFailedPasswordInvalid</td>
-          <td class="col-duration">0.36</td>
+          <td class="col-duration">0.37</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -401,7 +428,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Registration.py::TestRegistration::test_Refresh</td>
-          <td class="col-duration">0.72</td>
+          <td class="col-duration">0.77</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -411,15 +438,6 @@ function filter_table(elem) {
           <td class="col-result">Passed</td>
           <td class="col-name">test_Settings.py::TestSettings::test_UserSettingElementsDispalyed</td>
           <td class="col-duration">0.01</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="empty log">No log output captured.</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">test_Settings.py::TestSettings::test_ProfileSettingsElementsDisplayed</td>
-          <td class="col-duration">0.25</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -437,7 +455,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Settings.py::TestSettings::test_UpdateEmailTextDisplayed</td>
-          <td class="col-duration">0.48</td>
+          <td class="col-duration">0.50</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -446,7 +464,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Settings.py::TestSettings::test_ChangePasswordElementsDisplayed</td>
-          <td class="col-duration">0.50</td>
+          <td class="col-duration">0.48</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -464,7 +482,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Threads.py::TestThreads::test_Upvote</td>
-          <td class="col-duration">0.99</td>
+          <td class="col-duration">0.93</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -473,7 +491,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Threads.py::TestThreads::test_Downvote</td>
-          <td class="col-duration">0.96</td>
+          <td class="col-duration">0.95</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -482,7 +500,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Threads.py::TestThreads::test_DoubleUpvote</td>
-          <td class="col-duration">1.83</td>
+          <td class="col-duration">1.78</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -491,7 +509,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Threads.py::TestThreads::test_DoubleDownvote</td>
-          <td class="col-duration">1.81</td>
+          <td class="col-duration">1.82</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
