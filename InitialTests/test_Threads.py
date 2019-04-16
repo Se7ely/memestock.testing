@@ -54,3 +54,4 @@ class TestThreads():
             t.GetDownvoteButton(Setup).click()
             t.GetDownvoteButton(Setup).click()
             assert t.GetVoteCount(Setup)=='0'
+

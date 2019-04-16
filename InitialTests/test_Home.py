@@ -32,7 +32,11 @@ class TestHome():
 
         assert True
 
-
+    def test_Refresh(self,Setup):
+        mp=MainPage()
+        Setup.refresh()
+        assert mp.IsOn(Setup)
+        #add assert checking content is still on page
 
 
 

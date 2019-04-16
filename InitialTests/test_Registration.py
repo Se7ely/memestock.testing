@@ -35,6 +35,13 @@ class TestRegistration():
         rp.GetRegisterbutton(Setup).click()
         assert rp.ErrorDisplayed(Setup)
 
+    def test_Refresh(self,Setup):
+        rp=RegisterPage()
+        Setup.refresh()
+        assert rp.IsOn(Setup)
+        #add assert checking content is still on page
+
+
     """
     
     Implement the following cases when frontend team delivers design

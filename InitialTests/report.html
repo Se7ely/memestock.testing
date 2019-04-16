@@ -235,7 +235,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 16-Apr-2019 at 14:25:04 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v1.20.0</p>
+    <p>Report generated on 16-Apr-2019 at 16:29:44 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v1.20.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -260,8 +260,8 @@ function filter_table(elem) {
         <td>Python</td>
         <td>3.6.5</td></tr></table>
     <h2>Summary</h2>
-    <p>0 tests ran in 0.20 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">6 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>24 tests ran in 205.01 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">16 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">8 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -272,57 +272,219 @@ function filter_table(elem) {
           <th>Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="error results-table-row">
+      <tbody class="failed results-table-row">
         <tr>
-          <td class="col-result">Error</td>
-          <td class="col-name">test_CreatePost.py::collect</td>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_CreatePost.py::TestCreatePost::test_CreatePost</td>
+          <td class="col-duration">0.52</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;InitialTests.test_CreatePost.TestCreatePost object at 0x03E917B0&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;22a97954-e603-437c-860b-98eef1a29fdd&quot;)&gt;<br/><br/>    def test_CreatePost(self,Setup):<br/>        cpp=CreatePostPage()<br/>        cpp.Getsubredditfield(Setup).send_keys(&#x27;sfghjkjyjurytryhtjfgkh&#x27;)<br/>        cpp.Gettitlefield(Setup).send_keys(&#x27;YTTHJFTYHJUYGH&#x27;)<br/>        cpp.Getbodyfield(Setup).send_keys(&#x27;dadewfwegrhhsgsehshrsh, rgerhrgwrgewwegwegwege&#x27;)<br/>        cpp.Getcreatebutton(Setup).click()<br/>        #add assert onpage when their is response<br/>        #add assert post is created as input<br/>&gt;       assert False<br/><span class="error">E       assert False</span><br/><br/>test_CreatePost.py:40: AssertionError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_CreatePost.py::TestCreatePost::test_Refresh</td>
+          <td class="col-duration">0.94</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;InitialTests.test_CreatePost.TestCreatePost object at 0x03E58390&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;d0176113-8edf-48af-98ab-188902bd5789&quot;)&gt;<br/><br/>    def test_Refresh(self,Setup):<br/>        cpp=CreatePostPage()<br/>        Setup.refresh()<br/>&gt;       assert cpp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.CreatePostPage.CreatePostPage object at 0x03E58570&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;d0176113-8edf-48af-98ab-188902bd5789&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.CreatePostPage.CreatePostPage object at 0x03E58570&gt;&gt; = &lt;Pages.CreatePostPage.CreatePostPage object at 0x03E58570&gt;.IsOn</span><br/><br/>test_CreatePost.py:45: AssertionError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_Home.py::TestHome::test_Refresh</td>
+          <td class="col-duration">0.85</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;InitialTests.test_Home.TestHome object at 0x03E91B10&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;0d727668-9316-4520-a21e-21c9e668aede&quot;)&gt;<br/><br/>    def test_Refresh(self,Setup):<br/>        mp=MainPage()<br/>        Setup.refresh()<br/>&gt;       assert mp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.MainPage.MainPage object at 0x03E91E50&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;0d727668-9316-4520-a21e-21c9e668aede&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.MainPage.MainPage object at 0x03E91E50&gt;&gt; = &lt;Pages.MainPage.MainPage object at 0x03E91E50&gt;.IsOn</span><br/><br/>test_Home.py:38: AssertionError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_Login.py::TestLogin::test_LoginFailedIncorrectPassword</td>
+          <td class="col-duration">3.49</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;InitialTests.test_Login.TestLogin object at 0x03E6EBF0&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;03da0eb0-4f08-4312-a898-b2d64b881aa6&quot;)&gt;<br/><br/>    def test_LoginFailedIncorrectPassword(self,Setup):<br/>    <br/>        lp = LoginPage()<br/>        lp.Getusernamefield(Setup).send_keys(&#x27;mostafa_hazem&#x27;)<br/>        lp.Getpasswordfield(Setup).send_keys(&#x27;1231234246732&#x27;)<br/>        lp.Getloginbutton(Setup).click()<br/>&gt;       assert lp.ErrorDisplayed(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method LoginPage.ErrorDisplayed of &lt;Pages.LoginPage.LoginPage object at 0x03E6E450&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;03da0eb0-4f08-4312-a898-b2d64b881aa6&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method LoginPage.ErrorDisplayed of &lt;Pages.LoginPage.LoginPage object at 0x03E6E450&gt;&gt; = &lt;Pages.LoginPage.LoginPage object at 0x03E6E450&gt;.ErrorDisplayed</span><br/><br/>test_Login.py:45: AssertionError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_Login.py::TestLogin::test_LoginFailedIncorrectUsername</td>
+          <td class="col-duration">3.43</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;InitialTests.test_Login.TestLogin object at 0x03E6E170&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;e79755bc-c547-4bb3-b4c1-8ebe0cd7ef32&quot;)&gt;<br/><br/>    def test_LoginFailedIncorrectUsername(self, Setup):<br/>        lp = LoginPage()<br/>        lp.Getusernamefield(Setup).send_keys(&#x27;Mostafa.Hazem&#x27;)<br/>        lp.Getpasswordfield(Setup).send_keys(&#x27;12345678&#x27;)<br/>        lp.Getloginbutton(Setup).click()<br/>    <br/>&gt;       assert lp.ErrorDisplayed(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method LoginPage.ErrorDisplayed of &lt;Pages.LoginPage.LoginPage object at 0x03E6E030&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;e79755bc-c547-4bb3-b4c1-8ebe0cd7ef32&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method LoginPage.ErrorDisplayed of &lt;Pages.LoginPage.LoginPage object at 0x03E6E030&gt;&gt; = &lt;Pages.LoginPage.LoginPage object at 0x03E6E030&gt;.ErrorDisplayed</span><br/><br/>test_Login.py:53: AssertionError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_Login.py::TestLogin::test_Refresh</td>
+          <td class="col-duration">0.81</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;InitialTests.test_Login.TestLogin object at 0x03EA1370&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;7346db13-34da-4939-80d1-da47fc155b57&quot;)&gt;<br/><br/>    def test_Refresh(self,Setup):<br/>        lp=LoginPage()<br/>        Setup.refresh()<br/>&gt;       assert lp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.LoginPage.LoginPage object at 0x03EA1CD0&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;7346db13-34da-4939-80d1-da47fc155b57&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.LoginPage.LoginPage object at 0x03EA1CD0&gt;&gt; = &lt;Pages.LoginPage.LoginPage object at 0x03EA1CD0&gt;.IsOn</span><br/><br/>test_Login.py:58: AssertionError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_Registration.py::TestRegistration::test_RegistrationSuccesful</td>
+          <td class="col-duration">0.49</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;InitialTests.test_Registration.TestRegistration object at 0x01078570&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;b87e04b2-54a0-4114-be5a-c14789639cee&quot;)&gt;<br/><br/>    def test_RegistrationSuccesful(self,Setup):<br/>    <br/>        rp=RegisterPage()<br/>        rp.Getusernamefield(Setup).send_keys(&#x27;testingbro&#x27;)<br/>        rp.Getemailfield(Setup).send_keys(&#x27;tbro@testman.com&#x27;)<br/>        rp.Getpasswordfield(Setup).send_keys(&#x27;s2sghjgksdfg&#x27;)<br/>        rp.GetRegisterbutton(Setup).click()<br/>        mp=MainPage()<br/>&gt;       assert mp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.MainPage.MainPage object at 0x01078B50&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;b87e04b2-54a0-4114-be5a-c14789639cee&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.MainPage.MainPage object at 0x01078B50&gt;&gt; = &lt;Pages.MainPage.MainPage object at 0x01078B50&gt;.IsOn</span><br/><br/>test_Registration.py:27: AssertionError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_Settings.py::TestSettings::test_Refresh</td>
+          <td class="col-duration">0.93</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;InitialTests.test_Settings.TestSettings object at 0x010A4530&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;6d0983b0-b3ea-4529-a619-973706d92f16&quot;)&gt;<br/><br/>    def test_Refresh(self,Setup):<br/>        usp=UserSettingsPage()<br/>        Setup.refresh()<br/>&gt;       assert usp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.UserSettingsPage.UserSettingsPage object at 0x01097610&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;6d0983b0-b3ea-4529-a619-973706d92f16&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.UserSettingsPage.UserSettingsPage object at 0x01097610&gt;&gt; = &lt;Pages.UserSettingsPage.UserSettingsPage object at 0x01097610&gt;.IsOn</span><br/><br/>test_Settings.py:82: AssertionError<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_CreatePost.py::TestCreatePost::test_AllVitalElementsDisplayed</td>
+          <td class="col-duration">0.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_Home.py::TestHome::test_AllVitalElementsDisplayed</td>
+          <td class="col-duration">0.04</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_Login.py::TestLogin::test_LoginSuccesful</td>
+          <td class="col-duration">0.40</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_Login.py::TestLogin::test_LoginFailedInvalidPassword</td>
+          <td class="col-duration">0.34</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_Registration.py::TestRegistration::test_RegistrationFailedPasswordInvalid</td>
+          <td class="col-duration">0.36</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_Registration.py::TestRegistration::test_Refresh</td>
+          <td class="col-duration">0.77</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_Settings.py::TestSettings::test_UserSettingElementsDispalyed</td>
+          <td class="col-duration">0.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_Settings.py::TestSettings::test_ProfileSettingsElementsDisplayed</td>
+          <td class="col-duration">0.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_Settings.py::TestSettings::test_AccountSettingsElementsdisplayed</td>
+          <td class="col-duration">0.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_Settings.py::TestSettings::test_UpdateEmailTextDisplayed</td>
+          <td class="col-duration">0.50</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_Settings.py::TestSettings::test_ChangePasswordElementsDisplayed</td>
+          <td class="col-duration">0.49</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_Threads.py::TestThreads::test_ThreadsDisplayed</td>
           <td class="col-duration">0.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">import file mismatch:<br/>imported module &#x27;Tests.test_CreatePost&#x27; has this __file__ attribute:<br/>  D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\test_CreatePost.py<br/>which is not the same as the test file we want to collect:<br/>  D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\Tests\test_CreatePost.py<br/>HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules<br/></div></td></tr></tbody>
-      <tbody class="error results-table-row">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
         <tr>
-          <td class="col-result">Error</td>
-          <td class="col-name">test_Home.py::collect</td>
-          <td class="col-duration">0.00</td>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_Threads.py::TestThreads::test_Upvote</td>
+          <td class="col-duration">0.93</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">import file mismatch:<br/>imported module &#x27;Tests.test_Home&#x27; has this __file__ attribute:<br/>  D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\test_Home.py<br/>which is not the same as the test file we want to collect:<br/>  D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\Tests\test_Home.py<br/>HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules<br/></div></td></tr></tbody>
-      <tbody class="error results-table-row">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
         <tr>
-          <td class="col-result">Error</td>
-          <td class="col-name">test_Login.py::collect</td>
-          <td class="col-duration">0.00</td>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_Threads.py::TestThreads::test_Downvote</td>
+          <td class="col-duration">0.93</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">import file mismatch:<br/>imported module &#x27;Tests.test_Login&#x27; has this __file__ attribute:<br/>  D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\test_Login.py<br/>which is not the same as the test file we want to collect:<br/>  D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\Tests\test_Login.py<br/>HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules<br/></div></td></tr></tbody>
-      <tbody class="error results-table-row">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
         <tr>
-          <td class="col-result">Error</td>
-          <td class="col-name">test_Registration.py::collect</td>
-          <td class="col-duration">0.00</td>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_Threads.py::TestThreads::test_DoubleUpvote</td>
+          <td class="col-duration">1.82</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">import file mismatch:<br/>imported module &#x27;Tests.test_Registration&#x27; has this __file__ attribute:<br/>  D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\test_Registration.py<br/>which is not the same as the test file we want to collect:<br/>  D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\Tests\test_Registration.py<br/>HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules<br/></div></td></tr></tbody>
-      <tbody class="error results-table-row">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
         <tr>
-          <td class="col-result">Error</td>
-          <td class="col-name">test_Settings.py::collect</td>
-          <td class="col-duration">0.00</td>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_Threads.py::TestThreads::test_DoubleDownvote</td>
+          <td class="col-duration">1.79</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">import file mismatch:<br/>imported module &#x27;Tests.test_Settings&#x27; has this __file__ attribute:<br/>  D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\test_Settings.py<br/>which is not the same as the test file we want to collect:<br/>  D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\Tests\test_Settings.py<br/>HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules<br/></div></td></tr></tbody>
-      <tbody class="error results-table-row">
-        <tr>
-          <td class="col-result">Error</td>
-          <td class="col-name">test_Threads.py::collect</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">import file mismatch:<br/>imported module &#x27;Tests.test_Threads&#x27; has this __file__ attribute:<br/>  D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\test_Threads.py<br/>which is not the same as the test file we want to collect:<br/>  D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\Tests\test_Threads.py<br/>HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules<br/></div></td></tr></tbody></table></body></html>
+            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>

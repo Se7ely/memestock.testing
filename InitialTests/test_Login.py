@@ -52,5 +52,12 @@ class TestLogin():
 
         assert lp.ErrorDisplayed(Setup)
 
+    def test_Refresh(self,Setup):
+        lp=LoginPage()
+        Setup.refresh()
+        assert lp.IsOn(Setup)
+        #add assert checking content is still on page
+
+
 
 

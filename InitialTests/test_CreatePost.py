@@ -39,3 +39,8 @@ class TestCreatePost():
         #add assert post is created as input
         assert False
 
+    def test_Refresh(self,Setup):
+        cpp=CreatePostPage()
+        Setup.refresh()
+        assert cpp.IsOn(Setup)
+        #add assert checking content is still on page
