@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver import ActionChains
 
 baseurl='http://localhost:3000'
-
+screenshots='D:\\Work\\University\\Spring 2019\\CMPN203\\TestingFramework\\memstock.testing\\InitialTests\\Screenshots\\'
 
 def FirefoxLoad(url):
     binary='C:\\Program Files\\Mozilla Firefox\\firefox.exe'

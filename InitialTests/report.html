@@ -235,7 +235,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 16-Apr-2019 at 16:29:44 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v1.20.0</p>
+    <p>Report generated on 17-Apr-2019 at 00:37:03 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v1.20.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -260,7 +260,7 @@ function filter_table(elem) {
         <td>Python</td>
         <td>3.6.5</td></tr></table>
     <h2>Summary</h2>
-    <p>24 tests ran in 205.01 seconds. </p>
+    <p>24 tests ran in 212.13 seconds. </p>
     <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">16 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">8 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
@@ -276,74 +276,82 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test_CreatePost.py::TestCreatePost::test_CreatePost</td>
-          <td class="col-duration">0.52</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">self = &lt;InitialTests.test_CreatePost.TestCreatePost object at 0x03E917B0&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;22a97954-e603-437c-860b-98eef1a29fdd&quot;)&gt;<br/><br/>    def test_CreatePost(self,Setup):<br/>        cpp=CreatePostPage()<br/>        cpp.Getsubredditfield(Setup).send_keys(&#x27;sfghjkjyjurytryhtjfgkh&#x27;)<br/>        cpp.Gettitlefield(Setup).send_keys(&#x27;YTTHJFTYHJUYGH&#x27;)<br/>        cpp.Getbodyfield(Setup).send_keys(&#x27;dadewfwegrhhsgsehshrsh, rgerhrgwrgewwegwegwege&#x27;)<br/>        cpp.Getcreatebutton(Setup).click()<br/>        #add assert onpage when their is response<br/>        #add assert post is created as input<br/>&gt;       assert False<br/><span class="error">E       assert False</span><br/><br/>test_CreatePost.py:40: AssertionError<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">test_CreatePost.py::TestCreatePost::test_Refresh</td>
-          <td class="col-duration">0.94</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">self = &lt;InitialTests.test_CreatePost.TestCreatePost object at 0x03E58390&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;d0176113-8edf-48af-98ab-188902bd5789&quot;)&gt;<br/><br/>    def test_Refresh(self,Setup):<br/>        cpp=CreatePostPage()<br/>        Setup.refresh()<br/>&gt;       assert cpp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.CreatePostPage.CreatePostPage object at 0x03E58570&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;d0176113-8edf-48af-98ab-188902bd5789&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.CreatePostPage.CreatePostPage object at 0x03E58570&gt;&gt; = &lt;Pages.CreatePostPage.CreatePostPage object at 0x03E58570&gt;.IsOn</span><br/><br/>test_CreatePost.py:45: AssertionError<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">test_Home.py::TestHome::test_Refresh</td>
-          <td class="col-duration">0.85</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">self = &lt;InitialTests.test_Home.TestHome object at 0x03E91B10&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;0d727668-9316-4520-a21e-21c9e668aede&quot;)&gt;<br/><br/>    def test_Refresh(self,Setup):<br/>        mp=MainPage()<br/>        Setup.refresh()<br/>&gt;       assert mp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.MainPage.MainPage object at 0x03E91E50&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;0d727668-9316-4520-a21e-21c9e668aede&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.MainPage.MainPage object at 0x03E91E50&gt;&gt; = &lt;Pages.MainPage.MainPage object at 0x03E91E50&gt;.IsOn</span><br/><br/>test_Home.py:38: AssertionError<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">test_Login.py::TestLogin::test_LoginFailedIncorrectPassword</td>
-          <td class="col-duration">3.49</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">self = &lt;InitialTests.test_Login.TestLogin object at 0x03E6EBF0&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;03da0eb0-4f08-4312-a898-b2d64b881aa6&quot;)&gt;<br/><br/>    def test_LoginFailedIncorrectPassword(self,Setup):<br/>    <br/>        lp = LoginPage()<br/>        lp.Getusernamefield(Setup).send_keys(&#x27;mostafa_hazem&#x27;)<br/>        lp.Getpasswordfield(Setup).send_keys(&#x27;1231234246732&#x27;)<br/>        lp.Getloginbutton(Setup).click()<br/>&gt;       assert lp.ErrorDisplayed(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method LoginPage.ErrorDisplayed of &lt;Pages.LoginPage.LoginPage object at 0x03E6E450&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;03da0eb0-4f08-4312-a898-b2d64b881aa6&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method LoginPage.ErrorDisplayed of &lt;Pages.LoginPage.LoginPage object at 0x03E6E450&gt;&gt; = &lt;Pages.LoginPage.LoginPage object at 0x03E6E450&gt;.ErrorDisplayed</span><br/><br/>test_Login.py:45: AssertionError<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">test_Login.py::TestLogin::test_LoginFailedIncorrectUsername</td>
-          <td class="col-duration">3.43</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">self = &lt;InitialTests.test_Login.TestLogin object at 0x03E6E170&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;e79755bc-c547-4bb3-b4c1-8ebe0cd7ef32&quot;)&gt;<br/><br/>    def test_LoginFailedIncorrectUsername(self, Setup):<br/>        lp = LoginPage()<br/>        lp.Getusernamefield(Setup).send_keys(&#x27;Mostafa.Hazem&#x27;)<br/>        lp.Getpasswordfield(Setup).send_keys(&#x27;12345678&#x27;)<br/>        lp.Getloginbutton(Setup).click()<br/>    <br/>&gt;       assert lp.ErrorDisplayed(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method LoginPage.ErrorDisplayed of &lt;Pages.LoginPage.LoginPage object at 0x03E6E030&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;e79755bc-c547-4bb3-b4c1-8ebe0cd7ef32&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method LoginPage.ErrorDisplayed of &lt;Pages.LoginPage.LoginPage object at 0x03E6E030&gt;&gt; = &lt;Pages.LoginPage.LoginPage object at 0x03E6E030&gt;.ErrorDisplayed</span><br/><br/>test_Login.py:53: AssertionError<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">test_Login.py::TestLogin::test_Refresh</td>
-          <td class="col-duration">0.81</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">self = &lt;InitialTests.test_Login.TestLogin object at 0x03EA1370&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;7346db13-34da-4939-80d1-da47fc155b57&quot;)&gt;<br/><br/>    def test_Refresh(self,Setup):<br/>        lp=LoginPage()<br/>        Setup.refresh()<br/>&gt;       assert lp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.LoginPage.LoginPage object at 0x03EA1CD0&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;7346db13-34da-4939-80d1-da47fc155b57&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.LoginPage.LoginPage object at 0x03EA1CD0&gt;&gt; = &lt;Pages.LoginPage.LoginPage object at 0x03EA1CD0&gt;.IsOn</span><br/><br/>test_Login.py:58: AssertionError<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">test_Registration.py::TestRegistration::test_RegistrationSuccesful</td>
           <td class="col-duration">0.49</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;InitialTests.test_Registration.TestRegistration object at 0x01078570&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;b87e04b2-54a0-4114-be5a-c14789639cee&quot;)&gt;<br/><br/>    def test_RegistrationSuccesful(self,Setup):<br/>    <br/>        rp=RegisterPage()<br/>        rp.Getusernamefield(Setup).send_keys(&#x27;testingbro&#x27;)<br/>        rp.Getemailfield(Setup).send_keys(&#x27;tbro@testman.com&#x27;)<br/>        rp.Getpasswordfield(Setup).send_keys(&#x27;s2sghjgksdfg&#x27;)<br/>        rp.GetRegisterbutton(Setup).click()<br/>        mp=MainPage()<br/>&gt;       assert mp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.MainPage.MainPage object at 0x01078B50&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;b87e04b2-54a0-4114-be5a-c14789639cee&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.MainPage.MainPage object at 0x01078B50&gt;&gt; = &lt;Pages.MainPage.MainPage object at 0x01078B50&gt;.IsOn</span><br/><br/>test_Registration.py:27: AssertionError<br/></div></td></tr></tbody>
+            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-33-47.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-33-47.png"/></a></div>
+            <div class="log">self = &lt;InitialTests.test_CreatePost.TestCreatePost object at 0x043FF850&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;f05ca8e7-47fe-4e3c-b2dd-d3ee1b864f60&quot;)&gt;<br/><br/>    def test_CreatePost(self,Setup):<br/>        cpp=CreatePostPage()<br/>        cpp.Getsubredditfield(Setup).send_keys(&#x27;sfghjkjyjurytryhtjfgkh&#x27;)<br/>        cpp.Gettitlefield(Setup).send_keys(&#x27;YTTHJFTYHJUYGH&#x27;)<br/>        cpp.Getbodyfield(Setup).send_keys(&#x27;dadewfwegrhhsgsehshrsh, rgerhrgwrgewwegwegwege&#x27;)<br/>        cpp.Getcreatebutton(Setup).click()<br/>        #add assert onpage when their is response<br/>        #add assert post is created as input<br/>&gt;       assert False<br/><span class="error">E       assert False</span><br/><br/>test_CreatePost.py:40: AssertionError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_CreatePost.py::TestCreatePost::test_Refresh</td>
+          <td class="col-duration">1.15</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-33-56.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-33-56.png"/></a></div>
+            <div class="log">self = &lt;InitialTests.test_CreatePost.TestCreatePost object at 0x0448A0F0&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;fda3a8e7-3c18-4de0-9216-a6f0ee015d31&quot;)&gt;<br/><br/>    def test_Refresh(self,Setup):<br/>        cpp=CreatePostPage()<br/>        Setup.refresh()<br/>&gt;       assert cpp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.CreatePostPage.CreatePostPage object at 0x0448ACD0&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;fda3a8e7-3c18-4de0-9216-a6f0ee015d31&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.CreatePostPage.CreatePostPage object at 0x0448ACD0&gt;&gt; = &lt;Pages.CreatePostPage.CreatePostPage object at 0x0448ACD0&gt;.IsOn</span><br/><br/>test_CreatePost.py:45: AssertionError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_Home.py::TestHome::test_Refresh</td>
+          <td class="col-duration">0.78</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-34-12.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-34-12.png"/></a></div>
+            <div class="log">self = &lt;InitialTests.test_Home.TestHome object at 0x044C6830&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;d26bcca3-5a75-453b-9fcc-f5db50774afd&quot;)&gt;<br/><br/>    def test_Refresh(self,Setup):<br/>        mp=MainPage()<br/>        Setup.refresh()<br/>&gt;       assert mp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.MainPage.MainPage object at 0x044C6530&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;d26bcca3-5a75-453b-9fcc-f5db50774afd&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.MainPage.MainPage object at 0x044C6530&gt;&gt; = &lt;Pages.MainPage.MainPage object at 0x044C6530&gt;.IsOn</span><br/><br/>test_Home.py:38: AssertionError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_Login.py::TestLogin::test_LoginFailedIncorrectPassword</td>
+          <td class="col-duration">3.47</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-34-38.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-34-38.png"/></a></div>
+            <div class="log">self = &lt;InitialTests.test_Login.TestLogin object at 0x044E73D0&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;1bfbbdbb-45d5-433c-b730-aedef7743f5e&quot;)&gt;<br/><br/>    def test_LoginFailedIncorrectPassword(self,Setup):<br/>    <br/>        lp = LoginPage()<br/>        lp.Getusernamefield(Setup).send_keys(&#x27;mostafa_hazem&#x27;)<br/>        lp.Getpasswordfield(Setup).send_keys(&#x27;1231234246732&#x27;)<br/>        lp.Getloginbutton(Setup).click()<br/>&gt;       assert lp.ErrorDisplayed(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method LoginPage.ErrorDisplayed of &lt;Pages.LoginPage.LoginPage object at 0x044C68D0&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;1bfbbdbb-45d5-433c-b730-aedef7743f5e&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method LoginPage.ErrorDisplayed of &lt;Pages.LoginPage.LoginPage object at 0x044C68D0&gt;&gt; = &lt;Pages.LoginPage.LoginPage object at 0x044C68D0&gt;.ErrorDisplayed</span><br/><br/>test_Login.py:45: AssertionError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_Login.py::TestLogin::test_LoginFailedIncorrectUsername</td>
+          <td class="col-duration">3.41</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-34-49.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-34-49.png"/></a></div>
+            <div class="log">self = &lt;InitialTests.test_Login.TestLogin object at 0x044E76D0&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;714bcbf0-b302-469f-b617-fc84b6275eb9&quot;)&gt;<br/><br/>    def test_LoginFailedIncorrectUsername(self, Setup):<br/>        lp = LoginPage()<br/>        lp.Getusernamefield(Setup).send_keys(&#x27;Mostafa.Hazem&#x27;)<br/>        lp.Getpasswordfield(Setup).send_keys(&#x27;12345678&#x27;)<br/>        lp.Getloginbutton(Setup).click()<br/>    <br/>&gt;       assert lp.ErrorDisplayed(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method LoginPage.ErrorDisplayed of &lt;Pages.LoginPage.LoginPage object at 0x044C6990&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;714bcbf0-b302-469f-b617-fc84b6275eb9&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method LoginPage.ErrorDisplayed of &lt;Pages.LoginPage.LoginPage object at 0x044C6990&gt;&gt; = &lt;Pages.LoginPage.LoginPage object at 0x044C6990&gt;.ErrorDisplayed</span><br/><br/>test_Login.py:53: AssertionError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_Login.py::TestLogin::test_Refresh</td>
+          <td class="col-duration">0.79</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-34-57.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-34-57.png"/></a></div>
+            <div class="log">self = &lt;InitialTests.test_Login.TestLogin object at 0x04584850&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;18642896-651c-48ec-9e60-bc520a60838d&quot;)&gt;<br/><br/>    def test_Refresh(self,Setup):<br/>        lp=LoginPage()<br/>        Setup.refresh()<br/>&gt;       assert lp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.LoginPage.LoginPage object at 0x04584F50&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;18642896-651c-48ec-9e60-bc520a60838d&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.LoginPage.LoginPage object at 0x04584F50&gt;&gt; = &lt;Pages.LoginPage.LoginPage object at 0x04584F50&gt;.IsOn</span><br/><br/>test_Login.py:58: AssertionError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_Registration.py::TestRegistration::test_RegistrationSuccesful</td>
+          <td class="col-duration">0.46</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-35-04.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-35-04.png"/></a></div>
+            <div class="log">self = &lt;InitialTests.test_Registration.TestRegistration object at 0x0458DC50&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;bb5ccb89-4d0e-406e-b9a3-68e6dfe21911&quot;)&gt;<br/><br/>    def test_RegistrationSuccesful(self,Setup):<br/>    <br/>        rp=RegisterPage()<br/>        rp.Getusernamefield(Setup).send_keys(&#x27;testingbro&#x27;)<br/>        rp.Getemailfield(Setup).send_keys(&#x27;tbro@testman.com&#x27;)<br/>        rp.Getpasswordfield(Setup).send_keys(&#x27;s2sghjgksdfg&#x27;)<br/>        rp.GetRegisterbutton(Setup).click()<br/>        mp=MainPage()<br/>&gt;       assert mp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.MainPage.MainPage object at 0x0458DD10&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;bb5ccb89-4d0e-406e-b9a3-68e6dfe21911&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.MainPage.MainPage object at 0x0458DD10&gt;&gt; = &lt;Pages.MainPage.MainPage object at 0x0458DD10&gt;.IsOn</span><br/><br/>test_Registration.py:27: AssertionError<br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test_Settings.py::TestSettings::test_Refresh</td>
-          <td class="col-duration">0.93</td>
+          <td class="col-duration">0.85</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;InitialTests.test_Settings.TestSettings object at 0x010A4530&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;6d0983b0-b3ea-4529-a619-973706d92f16&quot;)&gt;<br/><br/>    def test_Refresh(self,Setup):<br/>        usp=UserSettingsPage()<br/>        Setup.refresh()<br/>&gt;       assert usp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.UserSettingsPage.UserSettingsPage object at 0x01097610&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;6d0983b0-b3ea-4529-a619-973706d92f16&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.UserSettingsPage.UserSettingsPage object at 0x01097610&gt;&gt; = &lt;Pages.UserSettingsPage.UserSettingsPage object at 0x01097610&gt;.IsOn</span><br/><br/>test_Settings.py:82: AssertionError<br/></div></td></tr></tbody>
+            <div class="image"><a href="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-36-12.png"><img src="D:\Work\University\Spring 2019\CMPN203\TestingFramework\memstock.testing\InitialTests\Screenshots\00-36-12.png"/></a></div>
+            <div class="log">self = &lt;InitialTests.test_Settings.TestSettings object at 0x045A2A70&gt;<br/>Setup = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;b2f292cb-a869-403c-96e1-b5ff776c641c&quot;)&gt;<br/><br/>    def test_Refresh(self,Setup):<br/>        usp=UserSettingsPage()<br/>        Setup.refresh()<br/>&gt;       assert usp.IsOn(Setup)<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Page.IsOn of &lt;Pages.UserSettingsPage.UserSettingsPage object at 0x045A2D70&gt;&gt;(&lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;b2f292cb-a869-403c-96e1-b5ff776c641c&quot;)&gt;)</span><br/><span class="error">E        +    where &lt;bound method Page.IsOn of &lt;Pages.UserSettingsPage.UserSettingsPage object at 0x045A2D70&gt;&gt; = &lt;Pages.UserSettingsPage.UserSettingsPage object at 0x045A2D70&gt;.IsOn</span><br/><br/>test_Settings.py:82: AssertionError<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
@@ -357,7 +365,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Home.py::TestHome::test_AllVitalElementsDisplayed</td>
-          <td class="col-duration">0.04</td>
+          <td class="col-duration">0.03</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -366,7 +374,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Login.py::TestLogin::test_LoginSuccesful</td>
-          <td class="col-duration">0.40</td>
+          <td class="col-duration">0.44</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -375,7 +383,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Login.py::TestLogin::test_LoginFailedInvalidPassword</td>
-          <td class="col-duration">0.34</td>
+          <td class="col-duration">0.32</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -393,7 +401,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Registration.py::TestRegistration::test_Refresh</td>
-          <td class="col-duration">0.77</td>
+          <td class="col-duration">0.72</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -411,7 +419,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Settings.py::TestSettings::test_ProfileSettingsElementsDisplayed</td>
-          <td class="col-duration">0.24</td>
+          <td class="col-duration">0.25</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -420,7 +428,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Settings.py::TestSettings::test_AccountSettingsElementsdisplayed</td>
-          <td class="col-duration">0.24</td>
+          <td class="col-duration">0.25</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -429,7 +437,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Settings.py::TestSettings::test_UpdateEmailTextDisplayed</td>
-          <td class="col-duration">0.50</td>
+          <td class="col-duration">0.48</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -438,7 +446,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Settings.py::TestSettings::test_ChangePasswordElementsDisplayed</td>
-          <td class="col-duration">0.49</td>
+          <td class="col-duration">0.50</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -447,7 +455,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Threads.py::TestThreads::test_ThreadsDisplayed</td>
-          <td class="col-duration">0.00</td>
+          <td class="col-duration">0.01</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -456,7 +464,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Threads.py::TestThreads::test_Upvote</td>
-          <td class="col-duration">0.93</td>
+          <td class="col-duration">0.99</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -465,7 +473,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Threads.py::TestThreads::test_Downvote</td>
-          <td class="col-duration">0.93</td>
+          <td class="col-duration">0.96</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -474,7 +482,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Threads.py::TestThreads::test_DoubleUpvote</td>
-          <td class="col-duration">1.82</td>
+          <td class="col-duration">1.83</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -483,7 +491,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_Threads.py::TestThreads::test_DoubleDownvote</td>
-          <td class="col-duration">1.79</td>
+          <td class="col-duration">1.81</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
