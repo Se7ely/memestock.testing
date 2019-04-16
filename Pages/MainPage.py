@@ -2,7 +2,6 @@ from selenium import webdriver
 from GeneralUtilities import BrowserFunctions
 from Pages.Page import Page
 from Pages.LoginPage import LoginPage
-from Pages.PageElements.Threads import Thread
 class MainPage(Page):
 
     def __init__(self):
@@ -61,12 +60,7 @@ class MainPage(Page):
     def Getusersettings(self,driver):
         return driver.find_element_by_xpath(self.usersettings)
 
-    def GetThreads(self,driver):
-        threadslist=[]
-        for i in range(len(driver.find_elements_by_xpath(self.threads))):
-            threadslist.append(Thread(i+1))
 
-        return threadslist
 
     def Getyourstuffdrop(self,driver):
         return driver.find_element_by_xpath(self.yourstuffdrop)
