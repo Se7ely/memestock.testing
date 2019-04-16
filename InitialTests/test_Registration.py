@@ -24,8 +24,6 @@ class TestRegistration():
         rp.Getpasswordfield(Setup).send_keys('s2sghjgksdfg')
         rp.GetRegisterbutton(Setup).click()
         mp=MainPage()
-        Setup.save_screenshot("Test3.png")
-
         assert mp.IsOn(Setup)
 
     def test_RegistrationFailedPasswordInvalid(self,Setup):
@@ -35,8 +33,6 @@ class TestRegistration():
         rp.Getemailfield(Setup).send_keys('tbro@testman.com')
         rp.Getpasswordfield(Setup).send_keys('1yre')
         rp.GetRegisterbutton(Setup).click()
-        Setup.save_screenshot("Test4.png")
-
         assert rp.ErrorDisplayed(Setup)
 
     """

@@ -25,7 +25,6 @@ class TestLogin():
         lp.Getpasswordfield(Setup).send_keys('12345678')
         lp.Getloginbutton(Setup).click()
         mp=MainPage()
-        Setup.save_screenshot("Test2.png")
         assert mp.IsOn(Setup)
 
     def test_LoginFailedInvalidPassword(self,Setup):
@@ -34,7 +33,6 @@ class TestLogin():
         lp.Getusernamefield(Setup).send_keys('mostafa_hazem')
         lp.Getpasswordfield(Setup).send_keys('1yre')
         lp.Getloginbutton(Setup).click()
-        Setup.save_screenshot("Test2.png")
 
         assert lp.ErrorDisplayed(Setup)
 
@@ -44,8 +42,6 @@ class TestLogin():
         lp.Getusernamefield(Setup).send_keys('mostafa_hazem')
         lp.Getpasswordfield(Setup).send_keys('1231234246732')
         lp.Getloginbutton(Setup).click()
-        Setup.save_screenshot("Test2.png")
-
         assert lp.ErrorDisplayed(Setup)
 
     def test_LoginFailedIncorrectUsername(self, Setup):
@@ -53,7 +49,6 @@ class TestLogin():
         lp.Getusernamefield(Setup).send_keys('Mostafa.Hazem')
         lp.Getpasswordfield(Setup).send_keys('12345678')
         lp.Getloginbutton(Setup).click()
-        Setup.save_screenshot("Test2.png")
 
         assert lp.ErrorDisplayed(Setup)
 

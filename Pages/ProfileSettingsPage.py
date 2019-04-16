@@ -3,7 +3,6 @@ from GeneralUtilities import BrowserFunctions
 class ProfileSettingsPage(UserSettingsPage):
 
 
-
     def __init__(self):
         UserSettingsPage.__init__(self)
         self.url='/Settings/Profile'

@@ -24,5 +24,6 @@ class UserSettingsPage(MainPage):
         mp=MainPage()
         mp.Redirect(driver)
         BrowserFunctions.Hover(mp.Getyourstuffdrop(driver),driver)
+        BrowserFunctions.Hover(mp.Getyourstuffdrop(driver), driver)
         mp.Getusersettings(driver).click()
         return
