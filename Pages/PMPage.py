@@ -12,7 +12,9 @@ class PMPage(MainPage):
         self.composemessage='//*[@id="root"]/div/div/header/a[1]'
         self.sent='//*[@id="root"]/div/div/header/a[3]'
         self.inbox='//*[@id="root"]/div/div/header/a[2]'
-
+        """"
+        refactor xpath when appropriate
+        """
 
 
     def GetMessaging(self, driver):
