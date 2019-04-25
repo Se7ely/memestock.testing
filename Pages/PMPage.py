@@ -8,13 +8,11 @@ class PMPage(MainPage):
     def __init__(self):
         MainPage.__init__(self)
         self.url='/PM/'
-        self.messaging='//*[@id="root"]/div/div/header/h1'
-        self.composemessage='//*[@id="root"]/div/div/header/a[1]'
-        self.sent='//*[@id="root"]/div/div/header/a[3]'
-        self.inbox='//*[@id="root"]/div/div/header/a[2]'
-        """"
-        refactor xpath when appropriate
-        """
+        self.messaging='//h1[text()="Messaging"]'
+        self.composemessage='//a[@href="/PM/Compose"]'
+        self.sent='//a[@href="/Sent"]'
+        self.inbox='//a[@href="/Inbox"]'
+
 
 
     def GetMessaging(self, driver):
