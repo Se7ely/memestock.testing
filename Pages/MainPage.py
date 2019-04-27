@@ -10,6 +10,7 @@ class MainPage(Page):
         self.url='/Home/'
         self.totopanchor='//a[@href="#top"]'
         self.logobutton='//div[@class="memeLogo"]/a[@href="/Home/"]'
+        self.usernamedisplay='//nav[@class="memeNav"]/span'
 
         self.contentdrop='//div[@class="dropList"]//preceding-sibling::button'
         self.homecontent='//div[@class="dropList"]//a[@href="/Home/"]'
@@ -35,6 +36,9 @@ class MainPage(Page):
         lp.Getpasswordfield(driver).send_keys('12345678')
         lp.Getloginbutton(driver).click()
         return
+
+    def GetUsernameDisplay(self,driver):
+        return driver.find_element_by_xpath(self.usernamedisplay)
 
     def Gettotopanchor(self,driver):
         return driver.find_element_by_xpath(self.totopanchor)
