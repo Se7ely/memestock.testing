@@ -9,7 +9,7 @@ from selenium.webdriver import ActionChains
 import time
 from selenium.webdriver.common.keys import Keys
 
-driver=BrowserFunctions.BrowserLoad('gsfd')
+driver=BrowserFunctions.BrowserLoad()
 
 rp=RegisterPage(driver)
 rp.emailfield.send_keys('is it working ??')
@@ -18,11 +18,5 @@ rp.usernamefield.send_keys('goodddaaaamnnn')
 rp.passwordfield.send_keys('assdfgfbdfgsd')
 rp.registerbutton.click()
 
-mp=MainPage(driver)
-BrowserFunctions.Hover(mp.yourstuffdrop,driver)
-mp.usersettings.click()
-
-sp=UserSettingsPage(driver)
-sp.accounttab.click()
 
 print(driver.current_url)
