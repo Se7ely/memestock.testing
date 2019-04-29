@@ -8,10 +8,9 @@ class PMPage(MainPage):
     def __init__(self):
         MainPage.__init__(self)
         self.url='/PM/'
-        self.messaging='//h1[text()="Messaging"]'
         self.composemessage='//a[@href="/PM/Compose"]'
         self.sent='//a[@href="/Sent"]'
-        self.inbox='//a[@href="/Inbox"]'
+        self.inbox='//a[text()="Inbox"]'
 
 
 

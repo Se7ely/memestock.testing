@@ -1,5 +1,5 @@
 from GeneralUtilities import BrowserFunctions
-from Pages.UserSettingsPage import UserSettingsPage
+from Pages.SettingsPage import UserSettingsPage
 from Pages.ProfileSettingsPage import ProfileSettingsPage
 from Pages.AccountSettingsPage import AccountSettingsPage
 from Pages.MainPage import MainPage

@@ -12,6 +12,7 @@ class CreatePostPage(MainPage):
         self.titlefield='//textarea[@id="threadPageTitleField"]'
         self.bodyfield='//textarea[@id="threadPageBodyField"]'
         self.createbutton='//button[@class="threadPageCreateButton"]'
+        self.spoilercheckbox='//input[@name="Spoiler"]'
 
 
 

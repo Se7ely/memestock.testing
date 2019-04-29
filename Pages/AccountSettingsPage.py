@@ -1,14 +1,13 @@
-from Pages.UserSettingsPage import UserSettingsPage
+from Pages.SettingsPage import SettingsPage
 from GeneralUtilities import BrowserFunctions
-class AccountSettingsPage(UserSettingsPage):
+class AccountSettingsPage(SettingsPage):
 
     def __init__(self):
-        UserSettingsPage.__init__(self)
+        SettingsPage.__init__(self)
         self.url = '/Settings/Account'
         self.changeorupdateemail='//a[text()="Change/add Email"]'
         self.changepassword ='//a[text()="Change Password"]'
-        self.updateEmail='//input[@type="email"]'
-        self.updateEmailButton='//input[@type="submit"]'
+
         self.oldPassword='//input[@id="oldPassword"]'
         self.newPassword='//input[@id="newPassword"]'
         self.subButton='//input[@id="submit"]'

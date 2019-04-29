@@ -1,6 +1,6 @@
 from GeneralUtilities import BrowserFunctions
 from Pages.PMPage import PMPage
-from Pages.ComposeMessagePage import ComposeMessagePage
+from Pages.PMComposeMessagePage import ComposeMessagePage
 from Pages.MainPage import MainPage
 import unittest, pytest
 from ddt import ddt, data, unpack

@@ -1,10 +1,10 @@
-from Pages.UserSettingsPage import UserSettingsPage
+from Pages.SettingsPage import SettingsPage
 from GeneralUtilities import BrowserFunctions
-class ProfileSettingsPage(UserSettingsPage):
+class ProfileSettingsPage(SettingsPage):
 
 
     def __init__(self):
-        UserSettingsPage.__init__(self)
+        SettingsPage.__init__(self)
         self.url='/Settings/Profile'
         self.displaynamefield = '//input[@placeholder="Display Name (optional)"]'
         self.biofield = '//textarea[@placeholder="About (optional)"]'

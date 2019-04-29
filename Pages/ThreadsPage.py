@@ -8,7 +8,9 @@ class ThreadsPage(MainPage):
 
     def __init__(self):
         MainPage.__init__(self)
-        self.url= {'home': '/Home/', 'popular': '/popular/', 'all': '/All/', 'hot': '/Hot/'}
+        self.url=['/Home/','/popular/','/Hot/']
+
+        self.threads='//div[@class="threadContainer"]'
 
     def GetThreads(self,driver):
         threadslist=[]
@@ -16,3 +18,12 @@ class ThreadsPage(MainPage):
             threadslist.append(Thread(i+1))
 
         return threadslist
+
+    def IsOn(self,driver):
+        res=False
+        for i in self.url:
+            if BrowserFunctions.baseurl+i==driver.current_url:
+                res=True
+                break
+
+        return res

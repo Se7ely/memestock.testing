@@ -2,7 +2,7 @@ from GeneralUtilities import BrowserFunctions
 import Pages
 from Pages.RegisterPage import RegisterPage
 from Pages.MainPage import MainPage
-from Pages.UserSettingsPage import UserSettingsPage
+from Pages.SettingsPage import UserSettingsPage
 from Pages.AccountSettingsPage import AccountSettingsPage
 from Pages.ProfileSettingsPage import ProfileSettingsPage
 from selenium.webdriver import ActionChains
