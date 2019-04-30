@@ -7,7 +7,7 @@ baseurl='http://localhost:3000'
 screenshots='D:\\Work\\University\\Spring 2019\\CMPN203\\TestingFramework\\memstock.testing\\InitialTests\\Screenshots\\'
 
 def BrowserLoad(url=""):
-    """
+
     options = Options()
     options.add_argument('--ignore-certificate-errors')
     options.headless = True
@@ -25,6 +25,7 @@ def BrowserLoad(url=""):
     driver.implicitly_wait(3)
     driver.get(baseurl + url)
     return driver
+    """
 
 
 
