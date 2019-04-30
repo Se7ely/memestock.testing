@@ -20,10 +20,4 @@ class SettingsPage(MainPage):
         return driver.find_element_by_xpath(self.profiletab)
 
 
-    def Redirect(self,driver):
-        mp=MainPage()
-        mp.Redirect(driver)
-        BrowserFunctions.Hover(mp.Getyourstuffdrop(driver),driver)
-        BrowserFunctions.Hover(mp.Getyourstuffdrop(driver), driver)
-        mp.Getusersettings(driver).click()
-        return
+

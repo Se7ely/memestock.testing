@@ -1,5 +1,4 @@
 from GeneralUtilities import BrowserFunctions
-from Pages.RegisterPage import RegisterPage
 from Pages.MainPage import MainPage
 import unittest, pytest
 import random
@@ -10,7 +9,9 @@ from ddt import ddt, data, unpack
 def Setup():
 
     driver=BrowserFunctions.BrowserLoad()
-
+    mp = MainPage()
+    mp.Redirect(driver)
+    mp.GetSignupFormButton(driver).click()
     yield driver
     driver.close()
 
@@ -19,53 +20,34 @@ class TestRegistration():
 
     def test_RegistrationSuccesful(self,Setup):
         user=self.GenerateRandomUser()
-        rp=RegisterPage()
-        rp.Getusernamefield(Setup).send_keys(user)
-        rp.Getemailfield(Setup).send_keys(user+"@test.com")
-        rp.Getpasswordfield(Setup).send_keys('1234567890')
-        rp.GetRegisterbutton(Setup).click()
-        mp=MainPage()
-        assert mp.IsOn(Setup)
+        rp=MainPage()
+        rp.Signup(Setup,user,user+"@test.com","1234567890")
+        assert rp.LoggedIn(Setup)
 
     def test_RegistrationFailedPasswordInvalid(self,Setup):
         user = self.GenerateRandomUser()
-        rp = RegisterPage()
-        rp.Getusernamefield(Setup).send_keys(user)
-        rp.Getemailfield(Setup).send_keys(user + "@test.com")
-        rp.Getpasswordfield(Setup).send_keys('1234')
-        rp.GetRegisterbutton(Setup).click()
-        assert rp.ErrorDisplayed(Setup)
-
+        rp = MainPage()
+        rp.Signup(Setup, user, user + "@test.com", "123")
+        assert rp.SignupErrorIsOn(Setup)
 
     def test_RegistrationFailedRepeatedUsername(self,Setup):
-        rp = RegisterPage()
-        rp.Getusernamefield(Setup).send_keys("repeateduser")
-        rp.Getemailfield(Setup).send_keys("new@test.com")
-        rp.Getpasswordfield(Setup).send_keys('1234567890')
-        rp.GetRegisterbutton(Setup).click()
-        assert rp.ErrorDisplayed(Setup)
-
+        rp = MainPage()
+        rp.Signup(Setup, "repateduser","new@test.com", "1234567890")
+        assert rp.SignupErrorIsOn(Setup)
 
     def test_RegistrationFailedRepeatedEmail(self,Setup):
-        rp = RegisterPage()
-        rp.Getusernamefield(Setup).send_keys("new")
-        rp.Getemailfield(Setup).send_keys("repeateduser@test.com")
-        rp.Getpasswordfield(Setup).send_keys('1234567890')
-        rp.GetRegisterbutton(Setup).click()
-        assert rp.ErrorDisplayed(Setup)
+        rp = MainPage()
+        rp.Signup(Setup, "new", "repeateduser@test.com", "1234567890")
+        assert rp.SignupErrorIsOn(Setup)
 
     def test_RegistrationFailedWrongFormatEmail(self,Setup):
-        rp = RegisterPage()
-        rp.Getusernamefield(Setup).send_keys("new")
-        rp.Getemailfield(Setup).send_keys("wrong")
-        rp.Getpasswordfield(Setup).send_keys('1234567890')
-        rp.GetRegisterbutton(Setup).click()
-        mp = MainPage()
-        assert not mp.IsOn(Setup)
+        rp = MainPage()
+        rp.Signup(Setup, "new", "wrong", "1234567890")
+        assert rp.SignupErrorIsOn(Setup)
 
 
     def test_Refresh(self,Setup):
-        rp=RegisterPage()
+        rp=MainPage()
         Setup.refresh()
         assert rp.IsOn(Setup)
         #add assert checking content is still on page

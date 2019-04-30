@@ -1,7 +1,10 @@
 from GeneralUtilities import BrowserFunctions
-from Pages.SettingsPage import UserSettingsPage
+from Pages.SettingsPage import SettingsPage
 from Pages.ProfileSettingsPage import ProfileSettingsPage
 from Pages.AccountSettingsPage import AccountSettingsPage
+from Pages.AccountSettingsPageEmail import AccountSettingsPageEmail
+from Pages.AccountSettingsPagePassword import AccountSettingsPagePassword
+
 from Pages.MainPage import MainPage
 import unittest, pytest
 from ddt import ddt, data, unpack
@@ -10,7 +13,7 @@ from ddt import ddt, data, unpack
 def Setup():
 
     driver=BrowserFunctions.BrowserLoad()
-    usp= UserSettingsPage()
+    usp= SettingsPage()
     usp.Redirect(driver)
     yield driver
     driver.close()
@@ -20,7 +23,7 @@ def Setup():
 class TestSettings():
 
     def test_UserSettingElementsDispalyed(self,Setup):
-        usp=UserSettingsPage()
+        usp=SettingsPage()
         try:
             usp.Getprofiletab(Setup)
             usp.Getaccounttab(Setup)
@@ -55,9 +58,10 @@ class TestSettings():
         asp = AccountSettingsPage()
         asp.Getaccounttab(Setup).click()
         asp.Getchangeorupdateemail(Setup).click()
+        aspe=AccountSettingsPageEmail()
         try:
-            asp.Getpupdatemailbutton(Setup)
-            asp.GetupdateEmail(Setup)
+            aspe.Getpupdatemailbutton(Setup)
+            aspe.GetupdateEmail(Setup)
         except:
             assert False
 
@@ -67,17 +71,18 @@ class TestSettings():
         asp = AccountSettingsPage()
         asp.Getaccounttab(Setup).click()
         asp.Getchangepassword(Setup).click()
+        aspp=AccountSettingsPagePassword()
         try:
-            asp.Getnewpassword(Setup)
-            asp.Getoldpassword(Setup)
-            asp.Getsubbutton(Setup)
+            aspp.Getnewpassword(Setup)
+            aspp.Getoldpassword(Setup)
+            aspp.Getsubbutton(Setup)
         except:
             assert False
 
         assert True
 
     def test_Refresh(self,Setup):
-        usp=UserSettingsPage()
+        usp=SettingsPage()
         Setup.refresh()
         assert usp.IsOn(Setup)
         #add assert checking content is still on page

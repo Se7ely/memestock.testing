@@ -14,15 +14,6 @@ class CreatePostPage(MainPage):
         self.createbutton='//button[@class="threadPageCreateButton"]'
         self.spoilercheckbox='//input[@name="Spoiler"]'
 
-
-
-    def Redirect(self,driver):
-
-        mp=MainPage()
-        mp.Redirect(driver)
-        mp.Getcreatepostbutton(driver).click()
-        return
-
     def Getsubredditfield(self,driver):
         return driver.find_element_by_xpath(self.subredditfield)
 

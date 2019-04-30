@@ -14,8 +14,6 @@ class PMPage(MainPage):
 
 
 
-    def GetMessaging(self, driver):
-        return driver.find_element_by_xpath(self.messaging)
 
     def GetComposmessaging(self, driver):
         return driver.find_element_by_xpath(self.composemessage)
@@ -26,8 +24,4 @@ class PMPage(MainPage):
     def Getinbox(self, driver):
         return driver.find_element_by_xpath(self.inbox)
 
-    def Redirect(self, driver):
-        mp = MainPage()
-        mp.Redirect(driver)
-        mp.Getpmbutton(driver).click()
-        return
+

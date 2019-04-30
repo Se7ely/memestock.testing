@@ -1,5 +1,4 @@
 from GeneralUtilities import BrowserFunctions
-from Pages.LoginPage import LoginPage
 from Pages.MainPage import MainPage
 import unittest, pytest
 
@@ -10,8 +9,9 @@ from ddt import ddt, data, unpack
 def Setup():
 
     driver=BrowserFunctions.BrowserLoad()
-    lp=LoginPage()
-    lp.Redirect(driver)
+    mp=MainPage()
+    mp.Redirect(driver)
+    mp.GetLoginFormButton(driver).click()
     yield driver
     driver.close()
 
@@ -20,42 +20,33 @@ class TestLogin():
 
     def test_LoginSuccesful(self,Setup):
 
-        lp=LoginPage()
-        lp.Getusernamefield(Setup).send_keys('mostafa_hazem')
-        lp.Getpasswordfield(Setup).send_keys('12345678')
-        lp.Getloginbutton(Setup).click()
         mp=MainPage()
-        assert mp.IsOn(Setup)
+        mp.Login(Setup,'repeateduser','1234567890')
+        assert mp.LoggedIn(Setup)
 
     def test_LoginFailedInvalidPassword(self,Setup):
 
-        lp = LoginPage()
-        lp.Getusernamefield(Setup).send_keys('mostafa_hazem')
-        lp.Getpasswordfield(Setup).send_keys('1yre')
-        lp.Getloginbutton(Setup).click()
-
-        assert lp.ErrorDisplayed(Setup)
+        mp = MainPage()
+        mp.Login(Setup, 'repeateduser', '1yre')
+        assert mp.LoginErrorIsOn(Setup)
 
     def test_LoginFailedIncorrectPassword(self,Setup):
 
-        lp = LoginPage()
-        lp.Getusernamefield(Setup).send_keys('mostafa_hazem')
-        lp.Getpasswordfield(Setup).send_keys('1231234246732')
-        lp.Getloginbutton(Setup).click()
-        assert lp.ErrorDisplayed(Setup)
+        mp = MainPage()
+        mp.Login(Setup, 'repeateduser', '1231234246732')
+        assert mp.LoginErrorIsOn(Setup)
 
     def test_LoginFailedIncorrectUsername(self, Setup):
-        lp = LoginPage()
-        lp.Getusernamefield(Setup).send_keys('Mostafa.Hazem')
-        lp.Getpasswordfield(Setup).send_keys('12345678')
-        lp.Getloginbutton(Setup).click()
 
-        assert lp.ErrorDisplayed(Setup)
+        mp = MainPage()
+        mp.Login(Setup, 'nulluser', '12345678')
+        assert mp.LoginErrorIsOn(Setup)
+
 
     def test_Refresh(self,Setup):
-        lp=LoginPage()
+        mp=MainPage()
         Setup.refresh()
-        assert lp.IsOn(Setup)
+        assert mp.IsOn(Setup)
         #add assert checking content is still on page
 
 

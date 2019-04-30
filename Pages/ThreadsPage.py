@@ -27,3 +27,7 @@ class ThreadsPage(MainPage):
                 break
 
         return res
+
+    def Redirect(self,driver):
+        driver.get(BrowserFunctions.baseurl + self.url[0])
+        return

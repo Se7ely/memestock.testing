@@ -1,6 +1,6 @@
 from GeneralUtilities import BrowserFunctions
 from Pages.PMPage import PMPage
-from Pages.PMComposeMessagePage import ComposeMessagePage
+from Pages.PMComposeMessagePage import PMComposeMessagePage
 from Pages.MainPage import MainPage
 import unittest, pytest
 from ddt import ddt, data, unpack
@@ -21,7 +21,6 @@ class TestPM():
     def test_PMElementsDispalyed(self,Setup):
         pm=PMPage()
         try:
-            pm.GetMessaging(Setup)
             pm.GetComposmessaging(Setup)
             pm.GetSent(Setup)
             pm.Getinbox(Setup)
@@ -30,12 +29,12 @@ class TestPM():
         assert True
 
     def test_ComposeMessagesElementsDisplayed(self, Setup):
-        cmpm=ComposeMessagePage()
+        cmpm=PMComposeMessagePage()
         cmpm.GetComposmessaging(Setup).click()
         try:
-            cmpm.GetToText(Setup)
-            cmpm.GetSubjectText(Setup)
-            cmpm.GetYourMessage(Setup)
+            cmpm.GetToField(Setup)
+            cmpm.GetSubjectField(Setup)
+            cmpm.GetMessageField(Setup)
             cmpm.GetSubmitButton(Setup)
         except:
             assert False

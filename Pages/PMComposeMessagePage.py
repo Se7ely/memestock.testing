@@ -2,7 +2,7 @@ from Pages.PMPage import PMPage
 from GeneralUtilities import BrowserFunctions
 
 
-class PMComoseMessagePage(PMPage):
+class PMComposeMessagePage(PMPage):
 
 
     def __init__(self):

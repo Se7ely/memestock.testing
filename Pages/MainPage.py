@@ -6,7 +6,7 @@ class MainPage(Page):
     def __init__(self):
 
         Page.__init__(self)
-        self.url=''
+        self.url='/'
         self.totopanchor='//a[@href="#top"]'
         self.logobutton='//div[@class="memeLogo"]'
 
@@ -26,11 +26,13 @@ class MainPage(Page):
         self.usernamefieldli='//input[@class="usernameInput logi"]'
         self.passwordfieldli='//input[@class="passInput logi"]'
         self.loginbutton='//button[text()=" Login "]'
+        self.logininvalid='//p[@class="Login_Invalid__3998w"]'
 
         self.emailfieldsu='//input[@class="emailInput in"]'
         self.usernamefieldsu='//input[@class="usernameInput in"]'
         self.passwordfieldsu='//input[@class="passInput in"]'
         self.signupbutton='//button[text()="SIGN UP"]'
+        self.signupinvalid='//p[@class="Registration_Invalid__3zjtz"]'
 
         self.yourstuffdrop='//div[@class="yourStuffDropList"]//preceding-sibling::button' # wait till login to verify
         self.myprofile='//span[@to="/user/"]'
@@ -42,13 +44,6 @@ class MainPage(Page):
 
 
 
-    def Redirect(self,driver):
-        lp=LoginPage()
-        lp.Redirect(driver)
-        lp.Getusernamefield(driver).send_keys('mostafa_hazem')
-        lp.Getpasswordfield(driver).send_keys('12345678')
-        lp.Getloginbutton(driver).click()
-        return
 
     def Gettotopanchor(self,driver):
         return driver.find_element_by_xpath(self.totopanchor)
@@ -76,6 +71,61 @@ class MainPage(Page):
 
     def GetMyProfile(self,driver):
         return driver.find_element_by_xpath(self.myprofile)
+
+    def GetLoginFormButton(self,driver):
+        return driver.find_element_by_xpath(self.loginform)
+
+    def GetUsernameLoginField(self,driver):
+        return driver.find_element_by_xpath(self.usernamefieldli)
+
+    def GetPasswordLoginField(self,driver):
+        return driver.find_element_by_xpath(self.passwordfieldli)
+
+    def GetLoginButtonField(self,driver):
+        return driver.find_element_by_xpath(self.loginbutton)
+
+    def GetSignupFormButton(self,driver):
+        return driver.find_element_by_xpath(self.signupform)
+
+    def GetUsernameSignupField(self,driver):
+        return driver.find_element_by_xpath(self.usernamefieldsu)
+
+    def GetEmailSignupField(self,driver):
+        return driver.find_element_by_xpath(self.emailfieldsu)
+
+    def GetPasswordSignupField(self,driver):
+        return driver.find_element_by_xpath(self.passwordfieldsu)
+
+    def GetSignupButton(self,driver):
+        return driver.find_element_by_xpath(self.signupbutton)
+
+    def Login(self,driver,username,password):
+        self.GetUsernameLoginField(driver).send_keys(username)
+        self.GetPasswordLoginField(driver).send_keys(password)
+        self.GetLoginButtonField(driver).click()
+        return
+
+    def LoggedIn(self,driver):
+        l=driver.find_elements_by_xpath(self.yourstuffdrop)
+        return len(l)!=0
+
+    def LoginErrorIsOn(self, driver):
+        l=driver.find_elements_by_xpath(self.logininvalid)
+        return len(l) != 0
+
+    def SignupErrorIsOn(self,driver):
+        l = driver.find_elements_by_xpath(self.signupinvalid)
+        return len(l) != 0
+
+
+    def Signup(self,driver,username,email,password):
+        self.GetUsernameSignupField(driver).send_keys(username)
+        self.GetEmailSignupField(driver).send_keys(email)
+        self.GetPasswordSignupField(driver).send_keys(password)
+        self.GetSignupButton(driver).click()
+
+
+
 
 
 

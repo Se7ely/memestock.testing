@@ -29,29 +29,40 @@ class TestThreads():
         tp = ThreadsPage()
         threadlist = tp.GetThreads(Setup)
         for t in threadlist:
+            vc=t.GetVoteCount(Setup)
             t.GetUpvoteButton(Setup).click()
-            assert t.GetVoteCount(Setup)=='1'
+            assert t.GetVoteCount(Setup)==str(vc+1)
 
     def test_Downvote(self,Setup):
         tp = ThreadsPage()
         threadlist = tp.GetThreads(Setup)
         for t in threadlist:
+            vc = t.GetVoteCount(Setup)
             t.GetDownvoteButton(Setup).click()
-            assert t.GetVoteCount(Setup)=='-1'
+            assert t.GetVoteCount(Setup) == str(vc - 1)
 
     def test_DoubleUpvote(self,Setup):
         tp = ThreadsPage()
         threadlist = tp.GetThreads(Setup)
         for t in threadlist:
+            vc = t.GetVoteCount(Setup)
             t.GetUpvoteButton(Setup).click()
             t.GetUpvoteButton(Setup).click()
-            assert t.GetVoteCount(Setup)=='0'
+            assert t.GetVoteCount(Setup) == str(vc)
 
     def test_DoubleDownvote(self,Setup):
         tp = ThreadsPage()
         threadlist = tp.GetThreads(Setup)
         for t in threadlist:
+            vc = t.GetVoteCount(Setup)
             t.GetDownvoteButton(Setup).click()
             t.GetDownvoteButton(Setup).click()
-            assert t.GetVoteCount(Setup)=='0'
+            assert t.GetVoteCount(Setup)==str(vc)
+
+
+
+    def test_Refresh(self,Setup):
+        tp=ThreadsPage()
+        Setup.refresh()
+        assert tp.IsOn(Setup)
 

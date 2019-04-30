@@ -26,7 +26,6 @@ class TestHome():
             mp.Getpmbutton(Setup)
             mp.Getsearchbar(Setup)
             mp.Gettotopanchor(Setup)
-            mp.Getyourstuffdrop(Setup)
         except:
             assert False
 

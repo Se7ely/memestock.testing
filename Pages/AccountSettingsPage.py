@@ -18,17 +18,4 @@ class AccountSettingsPage(SettingsPage):
     def Getchangepassword(self,driver):
         return driver.find_element_by_xpath(self.changepassword)
 
-    def GetupdateEmail(self,driver):
-        return driver.find_element_by_xpath(self.updateEmail)
 
-    def Getpupdatemailbutton(self,driver):
-        return driver.find_element_by_xpath(self.updateEmailButton)
-
-    def Getsubbutton(self,driver):
-        return driver.find_element_by_xpath(self.subButton)
-
-    def Getoldpassword(self,driver):
-        return driver.find_element_by_xpath(self.oldPassword)
-
-    def Getnewpassword(self,driver):
-        return driver.find_element_by_xpath(self.newPassword)
