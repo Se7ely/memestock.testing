@@ -7,7 +7,7 @@ from Pages.AccountSettingsPagePassword import AccountSettingsPagePassword
 
 from Pages.MainPage import MainPage
 import unittest, pytest
-from ddt import ddt, data, unpack
+
 
 @pytest.fixture()
 def Setup():
@@ -25,15 +25,15 @@ class TestSettings():
     def test_UserSettingElementsDispalyed(self,Setup):
         usp=SettingsPage()
         try:
-            usp.Getprofiletab(Setup)
-            usp.Getaccounttab(Setup)
+            usp.GetProfileTab(Setup)
+            usp.GetAccountTab(Setup)
         except:
             assert False
         assert True
 
     def test_ProfileSettingsElementsDisplayed(self, Setup):
         psp=ProfileSettingsPage()
-        psp.Getprofiletab(Setup).click()
+        psp.GetProfileTab(Setup).click()
         try:
             psp.Getdisplaynamefield(Setup)
             psp.Getbiofield(Setup)
@@ -44,10 +44,10 @@ class TestSettings():
 
     def test_AccountSettingsElementsdisplayed(self,Setup):
         asp=AccountSettingsPage()
-        asp.Getaccounttab(Setup).click()
+        asp.GetAccountTab(Setup).click()
         try:
-            asp.Getchangeorupdateemail(Setup)
-            asp.Getchangepassword(Setup)
+            asp.GetChangeOrUpdateEmail(Setup)
+            asp.GetChangePassword(Setup)
 
         except:
             assert  False
@@ -56,12 +56,12 @@ class TestSettings():
 
     def test_UpdateEmailTextDisplayed(self, Setup):
         asp = AccountSettingsPage()
-        asp.Getaccounttab(Setup).click()
-        asp.Getchangeorupdateemail(Setup).click()
+        asp.GetAccountTab(Setup).click()
+        asp.GetChangeOrUpdateEmail(Setup).click()
         aspe=AccountSettingsPageEmail()
         try:
-            aspe.Getpupdatemailbutton(Setup)
-            aspe.GetupdateEmail(Setup)
+            aspe.GetUpdateEmailButton(Setup)
+            aspe.GetUpdateEmail(Setup)
         except:
             assert False
 
@@ -69,13 +69,13 @@ class TestSettings():
 
     def test_ChangePasswordElementsDisplayed(self, Setup):
         asp = AccountSettingsPage()
-        asp.Getaccounttab(Setup).click()
-        asp.Getchangepassword(Setup).click()
+        asp.GetAccountTab(Setup).click()
+        asp.GetChangePassword(Setup).click()
         aspp=AccountSettingsPagePassword()
         try:
-            aspp.Getnewpassword(Setup)
-            aspp.Getoldpassword(Setup)
-            aspp.Getsubbutton(Setup)
+            aspp.GetNewPassword(Setup)
+            aspp.GetOldPassword(Setup)
+            aspp.GetSubButton(Setup)
         except:
             assert False
 

@@ -3,7 +3,6 @@ from Pages.MainPage import MainPage
 from Pages.ThreadsPage import ThreadsPage
 
 import unittest, pytest
-from ddt import ddt, data, unpack
 
 
 @pytest.fixture()

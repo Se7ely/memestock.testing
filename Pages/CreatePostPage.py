@@ -14,14 +14,14 @@ class CreatePostPage(MainPage):
         self.createbutton='//button[@class="threadPageCreateButton"]'
         self.spoilercheckbox='//input[@name="Spoiler"]'
 
-    def Getsubredditfield(self,driver):
+    def GetSubRedditField(self, driver):
         return driver.find_element_by_xpath(self.subredditfield)
 
-    def Getcreatebutton(self,driver):
+    def GetCreateButton(self, driver):
         return driver.find_element_by_xpath(self.createbutton)
 
-    def Gettitlefield(self,driver):
+    def GetTitleField(self, driver):
         return driver.find_element_by_xpath(self.titlefield)
 
-    def Getbodyfield(self,driver):
+    def GetBodyField(self, driver):
         return driver.find_element_by_xpath(self.bodyfield)

@@ -8,14 +8,14 @@ class AccountSettingsPage(SettingsPage):
         self.changeorupdateemail='//a[text()="Change/add Email"]'
         self.changepassword ='//a[text()="Change Password"]'
 
-        self.oldPassword='//input[@id="oldPassword"]'
-        self.newPassword='//input[@id="newPassword"]'
-        self.subButton='//input[@id="submit"]'
+        self.oldpassword= '//input[@id="oldPassword"]'
+        self.newpassword= '//input[@id="newPassword"]'
+        self.subbutton= '//input[@id="submit"]'
 
-    def Getchangeorupdateemail(self,driver):
+    def GetChangeOrUpdateEmail(self, driver):
         return driver.find_element_by_xpath(self.changeorupdateemail)
 
-    def Getchangepassword(self,driver):
+    def GetChangePassword(self, driver):
         return driver.find_element_by_xpath(self.changepassword)
 
 

@@ -2,7 +2,7 @@ from GeneralUtilities import BrowserFunctions
 from Pages.MyProfilePage import MyProfilePage
 from Pages.MainPage import MainPage
 import unittest, pytest
-from ddt import ddt, data, unpack
+
 
 @pytest.fixture()
 def Setup():

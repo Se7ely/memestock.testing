@@ -3,7 +3,6 @@ from Pages.PMPage import PMPage
 from Pages.PMComposeMessagePage import PMComposeMessagePage
 from Pages.MainPage import MainPage
 import unittest, pytest
-from ddt import ddt, data, unpack
 
 @pytest.fixture()
 def Setup():
@@ -21,16 +20,16 @@ class TestPM():
     def test_PMElementsDispalyed(self,Setup):
         pm=PMPage()
         try:
-            pm.GetComposmessaging(Setup)
+            pm.GetComposeMessaging(Setup)
             pm.GetSent(Setup)
-            pm.Getinbox(Setup)
+            pm.GetInbox(Setup)
         except:
             assert False
         assert True
 
     def test_ComposeMessagesElementsDisplayed(self, Setup):
         cmpm=PMComposeMessagePage()
-        cmpm.GetComposmessaging(Setup).click()
+        cmpm.GetComposeMessaging(Setup).click()
         try:
             cmpm.GetToField(Setup)
             cmpm.GetSubjectField(Setup)

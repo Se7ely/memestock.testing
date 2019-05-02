@@ -12,10 +12,10 @@ class SettingsPage(MainPage):
         self.profiletab='//a[@href="/Settings/Profile"]'
 
 
-    def Getaccounttab(self,driver):
+    def GetAccountTab(self, driver):
         return driver.find_element_by_xpath(self.accounttab)
 
-    def Getprofiletab(self,driver):
+    def GetProfileTab(self, driver):
 
         return driver.find_element_by_xpath(self.profiletab)
 

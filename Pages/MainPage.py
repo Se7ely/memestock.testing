@@ -45,28 +45,28 @@ class MainPage(Page):
 
 
 
-    def Gettotopanchor(self,driver):
+    def GetTotoPanchor(self, driver):
         return driver.find_element_by_xpath(self.totopanchor)
 
-    def Getlogobutton(self,driver):
+    def GetLogoButton(self, driver):
         return driver.find_element_by_xpath(self.logobutton)
 
-    def Getsearchbar(self,driver):
+    def GetSearchBar(self, driver):
         return driver.find_element_by_xpath(self.searchbar)
 
-    def Getpmbutton(self,driver):
+    def GetPmButton(self, driver):
         return driver.find_element_by_xpath(self.pmbutton)
 
-    def Getcreatepostbutton(self,driver):
+    def GetCreatePostButton(self, driver):
         return driver.find_element_by_xpath(self.createpostbutton)
 
-    def Getnotificationsbutton(self,driver):
+    def GetNotificationsButton(self, driver):
         return driver.find_element_by_xpath(self.notificationsbutton)
 
-    def Getyourstuffdrop(self,driver):
+    def GetYourStuffDrop(self, driver):
         return driver.find_element_by_xpath(self.yourstuffdrop)
 
-    def Getusersettings(self,driver):
+    def GetUserSettings(self, driver):
         return driver.find_element_by_xpath(self.usersettings)
 
     def GetMyProfile(self,driver):

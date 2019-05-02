@@ -15,13 +15,13 @@ class PMPage(MainPage):
 
 
 
-    def GetComposmessaging(self, driver):
+    def GetComposeMessaging(self, driver):
         return driver.find_element_by_xpath(self.composemessage)
 
     def GetSent(self, driver):
         return driver.find_element_by_xpath(self.sent)
 
-    def Getinbox(self, driver):
+    def GetInbox(self, driver):
         return driver.find_element_by_xpath(self.inbox)
 
 

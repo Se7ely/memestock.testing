@@ -1,7 +1,7 @@
 from GeneralUtilities import BrowserFunctions
 from Pages.MainPage import MainPage
 import unittest, pytest
-from ddt import ddt, data, unpack
+
 
 
 @pytest.fixture()
@@ -20,12 +20,12 @@ class TestHome():
     def test_AllVitalElementsDisplayed(self, Setup):
         mp=MainPage()
         try:
-            mp.Getcreatepostbutton(Setup)
-            mp.Getlogobutton(Setup)
-            mp.Getnotificationsbutton(Setup)
-            mp.Getpmbutton(Setup)
-            mp.Getsearchbar(Setup)
-            mp.Gettotopanchor(Setup)
+            mp.GetCreatePostButton(Setup)
+            mp.GetLogoButton(Setup)
+            mp.GetNotificationsButton(Setup)
+            mp.GetPmButton(Setup)
+            mp.GetSearchBar(Setup)
+            mp.GetTotoPanchor(Setup)
         except:
             assert False
 

@@ -6,17 +6,17 @@ class AccountSettingsPagePassword(AccountSettingsPage):
 
     def __init__(self):
 
-        self.oldPassword='//input[@id="oldPassword"]'
-        self.newPassword='//input[@id="newPassword"]'
-        self.subButton='//input[@id="submit"]'
+        self.oldpassword= '//input[@id="oldPassword"]'
+        self.newpassword= '//input[@id="newPassword"]'
+        self.subbutton= '//input[@id="submit"]'
 
 
 
-    def Getsubbutton(self,driver):
-        return driver.find_element_by_xpath(self.subButton)
+    def GetSubButton(self, driver):
+        return driver.find_element_by_xpath(self.subbutton)
 
-    def Getoldpassword(self,driver):
-        return driver.find_element_by_xpath(self.oldPassword)
+    def GetOldPassword(self, driver):
+        return driver.find_element_by_xpath(self.oldpassword)
 
-    def Getnewpassword(self,driver):
-        return driver.find_element_by_xpath(self.newPassword)
+    def GetNewPassword(self, driver):
+        return driver.find_element_by_xpath(self.newpassword)

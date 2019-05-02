@@ -7,7 +7,7 @@ baseurl='http://localhost:3000'
 screenshots='D:\\Work\\University\\Spring 2019\\CMPN203\\TestingFramework\\memstock.testing\\InitialTests\\Screenshots\\'
 
 def BrowserLoad(url=""):
-
+    """
     options = Options()
     options.add_argument('--ignore-certificate-errors')
     options.headless = True
@@ -19,13 +19,13 @@ def BrowserLoad(url=""):
     driver.get(baseurl+url)
     return driver
     """
-    #binary="C:\\Program Files\\Mozilla Firefox\\firefox.exe"
+    # binary="C:\\Program Files\\Mozilla Firefox\\firefox.exe"
     driver=webdriver.Firefox()
     driver.maximize_window()
     driver.implicitly_wait(3)
     driver.get(baseurl + url)
     return driver
-    """
+
 
 
 

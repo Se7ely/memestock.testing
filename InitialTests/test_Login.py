@@ -2,7 +2,6 @@ from GeneralUtilities import BrowserFunctions
 from Pages.MainPage import MainPage
 import unittest, pytest
 
-from ddt import ddt, data, unpack
 
 
 @pytest.fixture()
