@@ -10,8 +10,26 @@ class CreateCommunityPage(MainPage):
         self.url = '/create-subreddit/'
         self.subredditnamefield='//input[@id="srSubredditName"]'
         self.subredditrulefields=['//textarea[@id="srSubredditRule1"]','//textarea[@id="srSubredditRule2"]','//textarea[@id="srSubredditRule3"]']
+        self.subredditbio='//textarea[@id="srSubredditBio"]'
+        self.subredditmoderator='//textarea[@id="srSubredditModerator"]'
+        self.subredditcoverphoto='//input[@id="coverPhoto"]'
         self.createbutton='//button[@class="srSubredditPageCreateButton"]'
 
+    def GetSubRedditNameField(self,driver):
+        return driver.find_element_by_xpath(self.subredditnamefield)
 
+    def GetSubRedditRuleFields(self,driver):
+        return driver.find_element_by_xpath(self.subredditrulefields)
 
+    def GetSubRedditBio(self,driver):
+        return driver.find_element_by_xpath(self.subredditbio)
+
+    def GetSubRedditModerator(self,driver):
+        return driver.find_element_by_xpath(self.subredditmoderator)
+
+    def GetSubRedditCoverPhoto(self,driver):
+        return driver.find_element_by_xpath(self.subredditcoverphoto)
+
+    def GetSubRedditCreateButton(self,driver):
+        return driver.find_element_by_xpath(self.createbutton)
 

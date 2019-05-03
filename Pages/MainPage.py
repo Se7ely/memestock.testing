@@ -125,7 +125,8 @@ class MainPage(Page):
         self.GetSignupButton(driver).click()
 
 
-
+    def GetCommunityButton(self, driver):
+        return driver.find_element_by_xpath(self.createcoummunityfloating)
 
 
 
