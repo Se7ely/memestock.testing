@@ -1,6 +1,5 @@
 from GeneralUtilities import BrowserFunctions
 from Pages.MainPage import MainPage
-from Pages.CreateCommunityPage import CreateCommunityPage
 import unittest, pytest
 
 
@@ -23,6 +22,7 @@ class TestHome():
         try:
             mp.GetCreatePostButton(Setup)
             mp.GetLogoButton(Setup)
+            mp.GetCommunityButton(Setup)
             mp.GetNotificationsButton(Setup)
             mp.GetPmButton(Setup)
             mp.GetSearchBar(Setup)
@@ -42,19 +42,3 @@ class TestHome():
 
 
 
-    def test_CommunityPageDisplayed(self, Setup):
-        cmd = CreateCommunityPage()
-        cmd.GetCommunityButton().click()
-
-        try:
-            cmd.GetSubRedditBio(Setup)
-            cmd.GetSubRedditCoverPhoto(Setup)
-            cmd.GetSubRedditModerator(Setup)
-            cmd.GetSubRedditNameField(Setup)
-            cmd.GetSubRedditRuleFields(Setup)
-            cmd.GetSubRedditCreateButton(Setup)
-
-        except:
-            assert False
-
-        assert True
