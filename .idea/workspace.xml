@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dab42480-5bcd-4256-957a-1b5ea0194284" name="Default Changelist" comment="">
-<<<<<<< refs/remotes/origin/createcommunity
-      <change afterPath="$PROJECT_DIR$/InitialTests/test_CreateCommunity.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InitialTests/test_Home.py" beforeDir="false" afterPath="$PROJECT_DIR$/InitialTests/test_Home.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/geckodriver.log" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
->>>>>>> Auto stash before rebase of "origin/FunctionsandVariablesUpdate"
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,13 +120,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/InitialTests/test_CreatePost.py">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< refs/remotes/origin/createcommunity
-            <state relative-caret-position="438">
-              <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="91" />
-=======
             <state relative-caret-position="2166">
               <caret line="116" column="60" selection-start-line="116" selection-start-column="60" selection-end-line="116" selection-end-column="60" />
->>>>>>> Auto stash before rebase of "origin/FunctionsandVariablesUpdate"
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -788,51 +776,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/InitialTests/test_Threads.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InitialTests/test_PM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/InitialTests/test_Home.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InitialTests/test_CreatePost.py">
+        <state relative-caret-position="918">
+          <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
+=======
+    <entry file="file://$PROJECT_DIR$/GeneralUtilities/BrowserFunctions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="91" />
+        <state relative-caret-position="133">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-<<<<<<< refs/remotes/origin/createcommunity
-    <entry file="file://$PROJECT_DIR$/InitialTests/test_CreateCommunity.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-=======
     <entry file="file://$PROJECT_DIR$/Pages/MainPage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2166">
           <caret line="116" column="60" selection-start-line="116" selection-start-column="60" selection-end-line="116" selection-end-column="60" />
->>>>>>> Auto stash before rebase of "origin/FunctionsandVariablesUpdate"
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
