@@ -13,6 +13,7 @@ class CreatePostPage(MainPage):
         self.bodyfield='//textarea[@id="threadPageBodyField"]'
         self.createbutton='//button[@class="threadPageCreateButton"]'
         self.spoilercheckbox='//input[@name="Spoiler"]'
+        self.photobutton='//label[@class="threadPageCreateButton"]'
 
     def GetSubRedditField(self, driver):
         return driver.find_element_by_xpath(self.subredditfield)
@@ -25,3 +26,9 @@ class CreatePostPage(MainPage):
 
     def GetBodyField(self, driver):
         return driver.find_element_by_xpath(self.bodyfield)
+
+    def GetPhotoButton(self, driver):
+        return driver.find_element_by_xpath(self.photobutton)
+
+    def GetSpoilerCheckBox(self, driver):
+        return driver.find_element_by_xpath(self.spoilercheckbox)
