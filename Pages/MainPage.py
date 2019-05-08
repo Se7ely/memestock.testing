@@ -15,6 +15,8 @@ class MainPage(Page):
         self.popularcontent ='//div[@class="dropList"]//span[text()="Popular"]'
         self.allcontent = '//div[@class="dropList"]//span[text()="All"]'
         self.hotcontent ='//div[@class="dropList"]//span[text()="Hot"]'
+        self.newcontent='//span[@class="sort srt1"]'
+        self.topcontent='//span[@class="sort srt2"]'
 
         self.searchbar='//input[@id="header-search-bar"]'
         self.pmbutton ='//a[@href="/PM/"]'
@@ -34,9 +36,11 @@ class MainPage(Page):
         self.signupbutton='//button[text()="SIGN UP"]'
         self.signupinvalid='//p[@class="Registration_Invalid__3zjtz"]'
 
+
         self.yourstuffdrop='//div[@class="yourStuffDropList"]//preceding-sibling::button' # wait till login to verify
         self.myprofile='//span[@to="/user/"]'
         self.usersettings='//span[@to="/settings/"]'
+        self.moderation='//span[@to="/moderation/"]'
         self.logout='//a[@href="#logout"]'
 
         self.createpostfloating='//button[text()="Create Post"]'
@@ -74,6 +78,9 @@ class MainPage(Page):
 
     def GetLoginFormButton(self,driver):
         return driver.find_element_by_xpath(self.loginform)
+
+    def GetModeration(self,driver):
+        return driver.find_element_by_xpath(self.moderation)
 
     def GetUsernameLoginField(self,driver):
         return driver.find_element_by_xpath(self.usernamefieldli)
@@ -129,9 +136,16 @@ class MainPage(Page):
         return driver.find_element_by_xpath(self.createcoummunityfloating)
 
 
+    def GetNewContent(self,driver):
+        return driver.find_element_by_xpath(self.newcontent)
+
+    def GetTopContent(self,driver):
+        return driver.find_element_by_xpath(self.topcontent)
+
+    def GetHomeContent(self,driver):
+        return driver.find_element_by_xpath(self.homecontent)
 
 
-
-
-
+    def GetHotContent(self,driver):
+        return driver.find_element_by_xpath(self.hotcontent)
 

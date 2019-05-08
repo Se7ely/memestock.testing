@@ -15,7 +15,7 @@ def Setup():
     driver.close()
 
 @pytest.mark.usefixtures('Setup')
-class TestCreatePost():
+class TestCreateCommunity():
 
     def test_AllVitalElementsDisplayed(self, Setup):
         cmd = CreateCommunityPage()
@@ -26,7 +26,7 @@ class TestCreatePost():
             cmd.GetSubRedditRuleFields(Setup)
             cmd.GetSubRedditBio(Setup)
             cmd.GetSubRedditModerator(Setup)
-            cmd.GetSubRedditCoverPhoto(Setup)
+            cmd.GetSubRedditCoverButton(Setup)
             cmd.GetSubRedditCreateButton(Setup)
         except:
             assert False
@@ -39,7 +39,7 @@ class TestCreatePost():
         cmd.GetSubRedditRuleFields(Setup).send_keys('jkjljj,jjkjkl,jkjkk')
         cmd.GetSubRedditBio(Setup).send_keys('ghtffgjgjgjh')
         cmd.GetSubRedditModerator(Setup).send_keys('gffgfhfhgfhfhfh')
-        cmd.GetSubRedditCoverPhoto(Setup)
+        cmd.GetSubRedditCoverButton(Setup).click()
         cmd.GetSubRedditCreateButton(Setup).click()
 
         #add assert onpage when their is response
