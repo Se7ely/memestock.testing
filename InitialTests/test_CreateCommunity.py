@@ -15,18 +15,18 @@ def Setup():
     driver.close()
 
 @pytest.mark.usefixtures('Setup')
-class TestCreatePost():
+class TestCreateCommunity():
 
     def test_AllVitalElementsDisplayed(self, Setup):
         cmd = CreateCommunityPage()
 
 
         try:
-            cmd.GetSubRedditBio(Setup)
-            cmd.GetSubRedditCoverPhoto(Setup)
-            cmd.GetSubRedditModerator(Setup)
             cmd.GetSubRedditNameField(Setup)
             cmd.GetSubRedditRuleFields(Setup)
+            cmd.GetSubRedditBio(Setup)
+            cmd.GetSubRedditModerator(Setup)
+            cmd.GetSubRedditCoverButton(Setup)
             cmd.GetSubRedditCreateButton(Setup)
         except:
             assert False
@@ -35,11 +35,13 @@ class TestCreatePost():
 
     def test_CreatePost(self,Setup):
         cmd=CreateCommunityPage()
-        cmd.GetSubRedditCoverPhoto(Setup)
-        cmd.GetSubRedditModerator(Setup).send_keys('mohamed,james')
         cmd.GetSubRedditNameField(Setup).send_keys('jamesbond')
-        cmd.GetSubRedditRuleFields(Setup).send_keys('hkgkggkg,hkjhkjhkhkj,khkjhkhk')
+        cmd.GetSubRedditRuleFields(Setup).send_keys('jkjljj,jjkjkl,jkjkk')
+        cmd.GetSubRedditBio(Setup).send_keys('ghtffgjgjgjh')
+        cmd.GetSubRedditModerator(Setup).send_keys('gffgfhfhgfhfhfh')
+        cmd.GetSubRedditCoverButton(Setup).click()
         cmd.GetSubRedditCreateButton(Setup).click()
+
         #add assert onpage when their is response
         #add assert post is created as input
         assert False

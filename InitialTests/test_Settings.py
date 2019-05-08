@@ -37,6 +37,7 @@ class TestSettings():
         try:
             psp.Getdisplaynamefield(Setup)
             psp.Getbiofield(Setup)
+            psp.GetSaveButton(Setup)
         except:
             assert False
 

@@ -24,6 +24,8 @@ class TestCreatePost():
             cpp.GetTitleField(Setup)
             cpp.GetBodyField(Setup)
             cpp.GetCreateButton(Setup)
+            cpp.GetPhotoButton(Setup)
+            cpp.GetSpoilerCheckBox(Setup)
         except:
             assert False
 
@@ -35,6 +37,7 @@ class TestCreatePost():
         cpp.GetTitleField(Setup).send_keys('YTTHJFTYHJUYGH')
         cpp.GetBodyField(Setup).send_keys('dadewfwegrhhsgsehshrsh, rgerhrgwrgewwegwegwege')
         cpp.GetCreateButton(Setup).click()
+        cpp.GetSpoilerCheckBox(Setup).click()
         #add assert onpage when their is response
         #add assert post is created as input
         assert False

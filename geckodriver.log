@@ -479,3 +479,11 @@ console.error: BroadcastService:
   Stack:
     remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
 
+[Parent 5212, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1556110388/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 5212, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1556110388/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 5212, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1556110388/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11064, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1556110388/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1557271329211	Marionette	INFO	Stopped listening on port 62494
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
